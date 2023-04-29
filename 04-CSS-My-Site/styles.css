@@ -1,0 +1,42 @@
+body {
+    background-color: beige;
+    box-sizing: border-box;
+}
+
+.top,
+.middle,
+.last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    border: 20px solid black;
+    background-color: red;
+    position: absolute;
+    right: 432px;
+    top: 498px;
+    width: 200px;
+    height: 200px;
+}
+
+.middle {
+    border: 20px solid black;
+    background-color: yellow;
+    position: absolute;
+    left: 600px;
+    top: 260px;
+    width: 200px;
+    height: 200px;
+}
+
+.last {
+    border: 20px solid black;
+    background-color: red;
+    position: absolute;
+    left: 360px;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+}
