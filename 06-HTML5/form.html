@@ -9,7 +9,52 @@
 </head>
 
 <body>
+    <form action="/action_page.php" method="get">
+        <label for="fname">First Name : </label>
+        <input type="text" name="fname" id="fname" value="Kishor"> <br>
+        <label for="lname">Last name : </label>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+        <h2>Your Favourite Language </h2>
 
+        <input type="radio" name="Language" id="css" value="CSS">CSS <br>
+        <input type="radio" name="Language" id="html" value="HTML"> HTML <br>
+        <input type="radio" name="Language" id="javascript" value="Javascript"> Javascript <br>
+
+        <h2>Your Favourite Language </h2>
+        <input type="checkbox" name="Language" id="css" value="CSS">CSS <br>
+        <input type="checkbox" name="Language" id="html" value="HTML"> HTML <br>
+        <input type="checkbox" name="Language" id="javascript" value="Javascript"> Javascript <br>
+
+        <h1>Which Car You want to buy</h1>
+        <select name="car" id="car" multiple>
+            <option value="Mercedes">Mercedes</option>
+            <option value="BMW">BMW</option>
+            <option value="TATA">Tata</option>
+            <option value="Tesla">Tesla</option>
+        </select>
+        <input type="submit" value="Submit">
+        <br><br>
+        <textarea name="message" id="msg-box" cols="30" rows="10">Your text will be shown here .... 
+        </textarea>
+
+        <fieldset>
+            <legend>Biodata</legend>
+            <label for="name">
+                <input type="text" name="name" id="name" value="Kishor">
+            </label>
+            <button type="submit" onclick=`alert(" Hello KKP")`>Submit</button>
+        </fieldset>
+
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+    </form>
 </body>
 
 </html>
