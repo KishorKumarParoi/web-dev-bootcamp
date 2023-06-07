@@ -1,0 +1,39 @@
+p {
+    color: blue;
+    text-align: center;
+}
+
+div {
+    border: 4px solid red;
+    width: 200px;
+    height: 100px;
+    margin: 5px;
+}
+
+.Box-1 {
+    background-color: aquamarine;
+}
+
+.Box-2 {
+    background-color: antiquewhite;
+}
+
+.Box-2:hover {
+    background-color: yellowgreen;
+}
+
+#Box-3 {
+    background-color: cyan;
+    /* visibility: hidden; */
+    /* display: none; */
+    position: relative;
+}
+
+.Box-4 {
+    background-color: khaki;
+}
+
+#roll:focus {
+    color: blue;
+    font-weight: 700;
+}
