@@ -1,0 +1,43 @@
+.swimming {
+    border: 5px solid salmon;
+    position: relative;
+}
+
+.swimming div {
+    border: 3px solid black;
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* #ring {
+    position: sticky;
+    top: 100px;
+} */
+
+.dummy {
+    border: 4px solid rebeccapurple;
+    background-color: aquamarine;
+    width: 200px;
+    height: 100px;
+}
+
+#water {
+    top: -110px;
+    position: relative;
+    border: none;
+}
+
+#ring {
+    top: -15px;
+    position: relative;
+    border: none;
+    z-index: 10;
+}
+
+#boy {
+    top: 75px;
+    position: relative;
+    z-index: 20;
+    border: none;
+}
