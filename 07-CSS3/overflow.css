@@ -1,0 +1,19 @@
+.big {
+    border: 5px solid red;
+    width: 200px;
+    padding: 10px;
+    height: 200px;
+    overflow-x: scroll;
+}
+
+.mini-mini {
+    width: 400px;
+    border: 2px solid burlywood;
+    overflow: hidden;
+}
+
+.short-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
