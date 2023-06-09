@@ -1,0 +1,86 @@
+.stage {
+    width: 800px;
+    height: 400px;
+    background-color: aquamarine;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+@keyframes sliding {
+
+    0% {
+        background-color: lime;
+        left: 0;
+        top: 0;
+        transform: scale(.75);
+    }
+
+    30% {
+        background-color: salmon;
+        top: 300px;
+    }
+
+    50% {
+        background-color: royalblue;
+        top: 15px;
+        transform: scale(1.5);
+    }
+
+    70% {
+        background-color: gold;
+        /* left: 350px; */
+        top: 300px;
+    }
+
+    100% {
+        background-color: red;
+        left: 730px;
+        top: 0;
+        transform: scale(.75);
+    }
+
+    /* 0% {
+        top: 0;
+        background-color: blue;
+    }*/
+
+    /* 25% {
+        left: 200px;
+        top: 400px;
+        background-color: salmon;
+    } */
+    /*
+    50% {
+        left: 400px;
+        top: 400px;
+        background-color: lime;
+    }*/
+
+    /* 75% {
+        left: 600px;
+        top: 400px;
+        background-color: rosybrown;
+    } */
+
+    /*100% {
+        left: 800px;
+        top: 0;
+        background-color: orange;
+    } */
+}
+
+.ball {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+    animation: sliding 2s ease-in-out .1s infinite alternate backwards;
+    animation-play-state: running;
+}
+
+.stage:hover .ball {
+    animation-play-state: paused;
+}
