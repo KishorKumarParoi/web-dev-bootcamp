@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-nav {
+    padding: 10px
+}
+
+.first-nav a {
+    margin-right: 20px;
+}
+
+.second-nav {
+    padding: 20px;
+}
+
+.second-nav a {
+    margin-left: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.my-cart {
+    margin-right: 20px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    color: red;
+}
+
+.login-form {
+    display: flex;
+    border: 2px solid rebeccapurple;
+    flex-direction: column;
+    height: 500px;
+    width: 50%;
+    padding: 30px;
+}
+
+
+#name,
+#mail,
+#password {
+    font-size: 700;
+    padding: 10px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+label {
+    font-size: 2em;
+}
+
+input[type="button"] {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    background-color: lime;
+}
