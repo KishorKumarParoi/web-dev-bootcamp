@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in Form</title>
+    <link rel="stylesheet" href="login-form.css">
+    <script src="https://kit.fontawesome.com/7faf204357.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="first-nav">
+                <a href="#">Home</a>
+                <a href="#">Product</a>
+                <a href="#">Blog</a>
+                <a href="#">About Us</a>
+            </span>
+            <span class="second-nav">
+                <span class="my-cart">
+                    <i class="fa-solid fa-cart-shopping"></i><a href="#">My Cart</a>
+                </span>
+                <span class="sign-out">
+                    <i class="fa-solid fa-right-from-bracket"></i><a href="#">Sign Out</a>
+                </span>
+            </span>
+        </nav>
+    </header>
+    <section class="login-container">
+        <form action="" class="login-form">
+            <h1>Login Form</h1>
+            <label for="name">Name :
+                <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+            </label>
+            <label for="mail">
+                E-mail:
+                <input type="email" name="mail" id="mail" placeholder="Enter Your Mail Id" required> <br>
+            </label>
+            <label for="password">
+                Password:
+                <input type="password" name="password" id="password" required maxlength="10">
+            </label>
+            <input type="button" value="Login">
+        </form>
+    </section>
+</body>
+
+</html>
