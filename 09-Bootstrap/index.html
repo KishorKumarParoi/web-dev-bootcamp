@@ -73,68 +73,89 @@
             </div>
         </nav>
 
+
         <!-- Slider Start -->
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="row d-flex align-items-center bg-info justify-content-space-around">
-                        <div class="col-lg-6 border border-1 p-5">
-                            <h1>Trending Headphone</h1>
-                            <p>This headphones brings out best audio.</p>
-                            <h3>Price : 100$</h3>
-                            <button type="button" class="btn btn-danger">Buy Now</button>
+                    <div class="carousel-item active d-flex flex-row border border-2 bg-info">
+                        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                            <h1>Best Headphone In The World</h1>
+                            <p class="ps-5 ms-5 fw-bold">This brings out best Audio Experience. This is best selling
+                                headphone in
+                                market
+                                currently.Bass and Treble is marvellous with ANC</p>
+                            <h3>Price : 100$ </h3>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="img col-lg-6">
                             <img src="Panda-Commerce/panda-commerce-bootstrap/images/banner-images/headphone.png"
-                                class="d-block w-100 img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="row d-flex align-items-center justify-content-space-around bg-info ">
-                        <div class="col-lg-6 p-5">
-                            <h1>Top Rated Xiaomi A2 TV</h1>
-                            <p>This TV brings out best audio and video Experience</p>
-                            <h3>Price : 1100$</h3>
-                            <button type="button" class="btn btn-danger">Buy Now</button>
-                        </div>
-                        <div class="col-lg-6">
-                            <img src="Panda-Commerce/panda-commerce-bootstrap/images/banner-images/tv.png"
                                 class="d-block w-100" alt="...">
                         </div>
                     </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Most Sold Out Headphone</h5>
+                        <p>Best Budget Headphone in 100$</p>
+                    </div>
                 </div>
-
-                <div class="carousel-item">
-                    <div class="row d-flex align-items-center justify-content-space-around bg-info">
-                        <div class="col-lg-6 p-5">
-                            <h1>Trending Xbox</h1>
-                            <p>This xbox brings out best Gaming Experience.</p>
-                            <h3>Price : 700$</h3>
-                            <button type=" button" class="btn btn-danger">Buy Now</button>
+                <div class="carousel-item active">
+                    <div class="carousel-item active d-flex flex-row border border-2 bg-info">
+                        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                            <h1>Best xbox In The World</h1>
+                            <p class="ps-5 ms-5 fw-bold">This brings out best Audio Experience. This is best selling
+                                headphone in
+                                market
+                                currently.Bass and Treble is marvellous with ANC</p>
+                            <h3>Price : 1010$ </h3>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="img col-lg-6">
                             <img src="Panda-Commerce/panda-commerce-bootstrap/images/banner-images/xbox.png"
                                 class="d-block w-100" alt="...">
                         </div>
                     </div>
-
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Best xbox</h5>
+                        <p>SBest Budget friendly xbox in 1010$</p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="carousel-item active d-flex flex-row border border-2 bg-info">
+                        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                            <h1>Best Headphone In The World</h1>
+                            <p class="ps-5 ms-5 fw-bold">This brings out best Audio Experience. This is best selling
+                                headphone in
+                                market
+                                currently.Bass and Treble is marvellous with ANC</p>
+                            <h3>Price : 100$ </h3>
+                        </div>
+                        <div class="img col-lg-6">
+                            <img src="Panda-Commerce/panda-commerce-bootstrap/images/banner-images/headphone.png"
+                                class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
                 </div>
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
