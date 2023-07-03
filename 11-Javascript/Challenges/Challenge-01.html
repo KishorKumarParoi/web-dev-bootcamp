@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge One</title>
+    <style>
+        body {
+            background-color: rgb(86, 86, 175);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>First Coding Challenge</h1>
+
+    <script>
+        let firstPersonName = prompt('Enter First person Name : ');
+        let secondPersonName = prompt("Enter Second person Name : ");
+
+        let firstPersonWeight = prompt("Enter First person Weight: ");
+        let firstPersonHeight = prompt("Enter First person Height : ");
+
+        let secondPersonWeight = prompt("Enter Second person Weight: ");
+        let secondPersonHeight = prompt("Enter second person Height : ");
+
+        let firstPersonBMI = firstPersonWeight / (firstPersonHeight ** 2);
+        let secondPersonBMI = secondPersonWeight / (secondPersonHeight ** 2);
+
+        console.log(firstPersonBMI)
+        console.log(secondPersonBMI)
+
+        let markHigherBMI = (firstPersonBMI > secondPersonBMI ? true : false);
+
+        if (markHigherBMI == true) {
+            alert(firstPersonName + " Has more BMI than " + secondPersonName);
+        }
+        else {
+            alert(secondPersonName + " Has more BMI than " + firstPersonName);
+        }
+    </script>
+</body>
+
+</html>
