@@ -8,6 +8,18 @@
     background-color: #fceae8;
 }
 
+.panda-bg-warning {
+    background-color: rgb(238, 238, 179);
+}
+
+.panda-bg-secondary {
+    background-color: #fceae7;
+}
+
+.panda-bg-success {
+    background-color: rgb(138, 234, 138);
+}
+
 .categories img {
     width: 100px;
 }
