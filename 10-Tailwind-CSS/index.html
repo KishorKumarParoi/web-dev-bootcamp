@@ -4,55 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS</title>
+    <title>Penguine Fashion</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <h1>Hello Jonogon, I am Learning Tailwind CSS Today</h1>
-    <h3>Let's Go</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, itaque amet non fugiat voluptatibus corrupti,
-        maiores quisquam repellendus blanditiis ipsa numquam obcaecati sit nisi doloribus. Dolor quos eum incidunt
-        illum?</p>
-    <h1>Hurrahhh</h1>
-    <button class="bg-blue-500 text-white  m-5">Click Mehh</button> <br>
-    <button class="bg-blue-500 text-white  p-5 m-5">Click Mehh</button>
+    <header>
+        <nav>
 
-    <section class="bg-blue-500 m-4 flex flex-wrap justify-center hover:flex-wrap-reverse">
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 basis-1/4">1</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">2</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">3</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">4</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 flex-1">5</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 basis-1/2">6</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 order-last">7</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 flex-auto">8</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 flex-auto">9</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 basis-1/3 hover:basis-1/2">10</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 flex-1">11</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 flex-none">12</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 shrink">13</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4 grow">14</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">15</div>
-    </section>
+        </nav>
 
-    <section class="bg-red-500 m-4 flex justify-items-center">
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">1</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">2</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">3</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">4</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">5</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">6</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">7</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">8</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">9</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">10</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">11</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">12</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">13</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">14</div>
-        <div class="bg-green-400 text-2xl font bold m-4 p-4">15</div>
-    </section>
+        <div class="banner">
+            <h1 class="text-2xl uppercase font-bold flex flex-col"><span class=" text-yellow-500">Be the
+                    Penguines</span> <span class="text-black-500">of
+                    winter</span>
+            </h1>
+        </div>
+    </header>
 </body>
 
 </html>
