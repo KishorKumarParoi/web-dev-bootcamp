@@ -11,13 +11,13 @@
 
 <body>
     <header>
-        <h1>Welcome to my Dom</h1>
+        <h1 class="random">Welcome to my Dom</h1>
     </header>
 
     <main>
         <h1>My Awesome Dom re baba</h1>
-        <ul>
-            <li>Jalali Set</li>
+        <ul class="random">
+            <li id="Jalali">Jalali Set</li>
             <li>Domdom</li>
             <li>Bonobash</li>
         </ul>
@@ -45,6 +45,35 @@
         for (let i of document.getElementsByTagName('h1')) {
             console.log(i.innerText)
         }
+
+        // option - 2
+
+        const idFind = document.getElementById('Jalali');
+        idFind.innerText = "Kishor Kumar Paroi"
+        console.log(idFind)
+
+        // option - 3
+
+        const classFind = document.getElementsByClassName('random')
+        console.log(classFind)
+        for (let x of classFind) {
+            console.log(x.innerHTML)
+        }
+
+        // option - 4
+        const queryAllSelect = document.querySelectorAll('.random');
+        console.log(queryAllSelect)
+        for (let x of queryAllSelect) {
+            console.log(x.innerText)
+        }
+
+        // option - 5
+        const firstQuerySelect = document.querySelector('.random');
+        console.log(firstQuerySelect.firstChild)
+
+        // option - 6
+        const idSelect = document.querySelector('#Jalali');
+        console.log(idSelect.innerText)
     </script>
 </body>
 
