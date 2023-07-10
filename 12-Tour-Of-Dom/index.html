@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour OF Dom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <header>
+        <h1>Welcome to my Dom</h1>
+    </header>
+
+    <main>
+        <h1>My Awesome Dom re baba</h1>
+        <ul>
+            <li>Jalali Set</li>
+            <li>Domdom</li>
+            <li>Bonobash</li>
+        </ul>
+    </main>
+
+    <script src="JS/dom.js"></script>
+    <script>
+        console.log("hello world");
+        console.log(document.getElementsByTagName('h1'));
+
+        // option - 1
+        const h1tag = document.getElementsByTagName('h1');
+        for (let i of h1tag) {
+            console.log(i.innerText)
+        }
+
+        h1tag.innerHTML = "Kishor Kumar Paroi";
+        console.log(h1tag)
+        for (let i of h1tag) {
+            console.log(i.innerText)
+        }
+        document.getElementsByTagName('h1').innerText = "Kishor Kumar Paroi";
+        // h1tag = document.getElementsByTagName('h1');
+
+        for (let i of document.getElementsByTagName('h1')) {
+            console.log(i.innerText)
+        }
+    </script>
+</body>
+
+</html>
