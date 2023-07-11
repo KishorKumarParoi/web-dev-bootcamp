@@ -11,16 +11,27 @@
 
 <body>
     <header>
-        <h1 class="random">Welcome to my Dom</h1>
+        <h1 class="random" id="welcome">Welcome to my Dom</h1>
     </header>
 
     <main>
-        <h1>My Awesome Dom re baba</h1>
-        <ul class="random">
+        <h1 class="title">My Awesome Dom re baba</h1>
+        <ul class="random-title" id="random">
             <li id="Jalali">Jalali Set</li>
-            <li>Domdom</li>
-            <li>Bonobash</li>
+            <li id="domdom">Domdom</li>
+            <li id="bonobash">Bonobash</li>
         </ul>
+
+        <div class="fruits-container" id="fruits-main">
+            <h1 id="fruits-title" class="fruits title blue-bg yellow-bg dot dot-baba" name="fruits"
+                value="fruits-title">Fruits : </h1>
+            <ul class="fruits">
+                <li class="aam-title">Aam</li>
+                <li id="jaam">Jaam</li>
+                <li>Kola</li>
+                <li>Lichu</li>
+            </ul>
+        </div>
     </main>
 
     <script src="JS/dom.js"></script>
@@ -74,6 +85,9 @@
         // option - 6
         const idSelect = document.querySelector('#Jalali');
         console.log(idSelect.innerText)
+
+        // SetAttribute & getAttribute
+
     </script>
 </body>
 
