@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+
+<body>
+    <button type="submit" onclick="console.log(101); document.body.style.backgroundColor = 'Steelblue';">Make
+        Blue</button>
+    <button type="submit" id="make-red">Make Red</button>
+    <button type=" submit" onclick="makePurple()">Make Purple</button>
+    <button type="submit" id="make-yellow">Make Yellow</button>
+    <button type="submit" id="make-green">Make Green</button>
+
+    <script src="purple.js"></script>
+    <script src="green.js"></script>
+    <script>
+        const makeRed = document.getElementById('make-red');
+        makeRed.onclick = make_Red;
+
+        function make_Red() {
+            document.body.style.background = 'red';
+        }
+    </script>
+
+    <script src="yellow.js"></script>
+</body>
+
+</html>
