@@ -14,6 +14,7 @@
     <button type=" submit" onclick="makePurple()">Make Purple</button>
     <button type="submit" id="make-yellow">Make Yellow</button>
     <button type="submit" id="make-green">Make Green</button>
+    <button type="submit" id="make-golden">Make Gold</button>
 
     <script src="purple.js"></script>
     <script src="green.js"></script>
@@ -24,6 +25,11 @@
         function make_Red() {
             document.body.style.background = 'red';
         }
+
+        const makeGold = document.getElementById('make-golden');
+        makeGold.addEventListener('click', function make_gold() {
+            document.body.style.backgroundColor = "goldenrod";
+        })
     </script>
 
     <script src="yellow.js"></script>
