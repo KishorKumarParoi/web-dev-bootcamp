@@ -15,6 +15,15 @@
     <button type="submit" id="make-yellow">Make Yellow</button>
     <button type="submit" id="make-green">Make Green</button>
     <button type="submit" id="make-golden">Make Gold</button>
+    <br>
+
+    <hr>
+
+    <h1 id="default">Deafult Text</h1>
+    <label for="fullname">
+        <input type="text" name="fullname" id="fullname">
+        <button type="submit" id="btn-submit">Submit</button>
+    </label>
 
     <script src="purple.js"></script>
     <script src="green.js"></script>
@@ -30,6 +39,17 @@
         makeGold.addEventListener('click', function make_gold() {
             document.body.style.backgroundColor = "goldenrod";
         })
+
+        const btnSubmit = document.getElementById('btn-submit');
+        btnSubmit.addEventListener('click', function () {
+            let inputField = document.getElementById('fullname');
+            let inputText = inputField.value;
+
+            let textChange = document.getElementById('default');
+            textChange.innerText = inputText;
+            inputField.value = '';
+        })
+
     </script>
 
     <script src="yellow.js"></script>
