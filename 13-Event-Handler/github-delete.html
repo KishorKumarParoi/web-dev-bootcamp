@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github</title>
+</head>
+
+<body>
+    <header id="heading">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dignissimos minus possimus consectetur aliquam
+        </h1>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nemo aliquid voluptates id non eius dignissimos
+            repellendus iusto atque iure?</h1>
+        <h1>repudiandae! Ex natus sapiente
+            itaque voluptatem magnam!</h1>
+        <h1>
+            nesciunt culpa praesentium eligendi doloribus. Aspernatur vel quibusdam labore
+        </h1>
+        <h1>repudiandae! Ex natus sapiente
+            itaque voluptatem magnam!</h1>
+    </header>
+
+    <textarea name="comment" id="comment" rows="4" cols="50" placeholder="Describe yourself here..."></textarea>
+    <button type="submit" id="btn-submit" class="text-center">Submit</button> <br>
+
+    <input type="text" name="delete" id="delete"><button type="submit" style="margin: 5px;"
+        id="delete-button">delete</button>
+
+    <script>
+        document.getElementById('btn-submit').addEventListener('click', function (event) {
+            // console.log(7);
+            let text = document.getElementById('comment').value;
+            let h1 = document.createElement('h1');
+            h1.innerText = text;
+            document.getElementById('heading').append(h1);
+            document.getElementById('comment').value = "";
+            console.log('first : ', text)
+        })
+
+        document.getElementById('comment').addEventListener('keyup', function (event) {
+            console.log(event.target.value)
+
+        })
+
+        document.getElementById('delete-button').addEventListener('click', function () {
+            let val = document.getElementById('delete').value;
+            console.log(val);
+            console.log(typeof val);
+
+            if (val == "delete") {
+                document.getElementById('heading').style.display = "none";
+            }
+            else {
+                document.getElementById('delete-button').setAttribute('disabled', 'true');
+            }
+            // document.getElementById('delete-button').value = "";
+        })
+    </script>
+
+</body>
+
+</html>
