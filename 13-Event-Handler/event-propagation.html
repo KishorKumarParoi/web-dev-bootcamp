@@ -5,45 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event-Propagation</title>
+    <style>
+        li {
+            border: 2px solid blue;
+            padding: 8px;
+            margin: 2px;
+        }
+
+        ul {
+            border: 5px solid black;
+            padding: 30px;
+        }
+
+        section {
+            border: 3px solid red;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <section id="main-container">
-            <!-- <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel impedit, laborum
-                    beatae doloribus animi quis? Adipisci in nobis ullam voluptate iusto et dolor perferendis. Nisi
-                    libero non molestias dolore!</p> -->
-            <ul id='container'>
-                <li>
-                    <h2 class="item" id="item-1">item-1</h2>
-                </li>
-                <li>
-                    <h2 class="item">item-2</h2>
-                </li>
-                <li>
-                    <h2 class="item">item-3</h2>
-                </li>
-            </ul>
-        </section>
-    </header>
+    <h1>Exploring Event Bubble</h1>
+
+    <section id="container">
+        <ul id="list-item">
+            <li id="item-1">Anaros</li>
+            <li id="item-2">Aam</li>
+            <li id="item-3">Jam</li>
+            <li id="item-4">Kola</li>
+            <li id="item-5">Lichu</li>
+            <li id="item-6">Kathal</li>
+        </ul>
+    </section>
 
     <script>
-        document.getElementById('item-1').addEventListener('click', function (event) {
-            // document.getElementById('item-1').style.backgroundColor = 'cyan';
-            // document.getElementById('item-1').style.padding = "20px";
-            console.log("item-1 clicked");
-            event.stopPropagation();
-        })
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 clicked');
+            event.stopImmediatePropagation();
+            // event.stopPropagation();
+        });
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 second clicked');
+        });
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 third clicked');
+        });
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 fourth clicked');
+        });
 
-        document.getElementById('container').addEventListener('click', function () {
-            // document.getElementById('container').style.backgroundColor = 'lightcoral';
-            // document.getElementById('container').style.padding = '50px';
-            console.log('Container Clicked')
-        })
-        document.getElementById('main-container').addEventListener('click', function () {
-            // document.getElementById('main-container').style.backgroundColor = 'limegreen';
-            // document.getElementById('main-container').style.padding = '100px';
-            console.log('Main Container Clicked')
+        document.getElementById('list-item').addEventListener('click', function (event) {
+            console.log('list-ul clicked');
+            event.stopPropagation();
+        });
+
+        document.getElementById('container').addEventListener('click', function (event) {
+            console.log('container clicked');
+            event.stopPropagation();
         })
 
     </script>
