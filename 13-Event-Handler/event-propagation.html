@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Propagation</title>
+</head>
+
+<body>
+    <header>
+        <section id="main-container">
+            <!-- <p class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel impedit, laborum
+                    beatae doloribus animi quis? Adipisci in nobis ullam voluptate iusto et dolor perferendis. Nisi
+                    libero non molestias dolore!</p> -->
+            <ul id='container'>
+                <li>
+                    <h2 class="item" id="item-1">item-1</h2>
+                </li>
+                <li>
+                    <h2 class="item">item-2</h2>
+                </li>
+                <li>
+                    <h2 class="item">item-3</h2>
+                </li>
+            </ul>
+        </section>
+    </header>
+
+    <script>
+        document.getElementById('item-1').addEventListener('click', function (event) {
+            // document.getElementById('item-1').style.backgroundColor = 'cyan';
+            // document.getElementById('item-1').style.padding = "20px";
+            console.log("item-1 clicked");
+            event.stopPropagation();
+        })
+
+        document.getElementById('container').addEventListener('click', function () {
+            // document.getElementById('container').style.backgroundColor = 'lightcoral';
+            // document.getElementById('container').style.padding = '50px';
+            console.log('Container Clicked')
+        })
+        document.getElementById('main-container').addEventListener('click', function () {
+            // document.getElementById('main-container').style.backgroundColor = 'limegreen';
+            // document.getElementById('main-container').style.padding = '100px';
+            console.log('Main Container Clicked')
+        })
+
+    </script>
+</body>
+
+</html>
