@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Propagation</title>
+    <style>
+        li {
+            border: 2px solid blue;
+            padding: 8px;
+            margin: 2px;
+        }
+
+        ul {
+            border: 5px solid black;
+            padding: 30px;
+        }
+
+        section {
+            border: 3px solid red;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exploring Event Delegate</h1>
+
+    <section id="container">
+        <ul id="list-item">
+            <li class="item">Anaros</li>
+            <li class="item">Aam</li>
+            <li class="item">Jam</li>
+            <li class="item">Kola</li>
+            <li class="item">Lichu</li>
+            <li class="item">Kathal</li>
+        </ul>
+
+        <button type="submit" id="btn-add">Add item</button>
+    </section>
+
+    <script>
+        // const items = document.getElementsByClassName('item');
+        // for (let item of items) {
+        //     item.addEventListener('click', function (event) {
+        //         // console.log(item.innerHTML);
+        //         // console.log(item);
+        //         console.log(event.target);
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+        document.getElementById('list-item').addEventListener('click', function (event) {
+            // for (let item of listItem.childNodes) {
+            //     item.addEventListener('click', function (event) {
+            // console.log(item.innerHTML);
+            // console.log(item);
+            console.log(event.target);
+            event.target.parentNode.removeChild(event.target);
+            // listItem.removeChild(item);
+            // })
+        });
+
+        const listContainer = document.getElementById('btn-add');
+
+        listContainer.addEventListener('click', function () {
+            const li = document.createElement('li');
+            li.innerText = "brand new element";
+            li.classList.add('item');
+            document.getElementById('list-item').append(li);
+        });
+
+
+    </script>
+</body>
+
+</html>
