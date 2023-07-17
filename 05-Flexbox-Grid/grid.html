@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: yellow;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            text-align: center;
+            padding: 10vh;
+            border: 2px solid black;
+        }
+
+        li:hover {
+            background-color: rgb(207, 43, 43);
+        }
+
+        .list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-auto-rows: 1fr;
+            grid-gap: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Why You Should Learn CSS Grid</h1>
+
+    <ul class="list">
+        <li>Easier to create multidimensional layout</li>
+        <li>Simpler markup</li>
+        <li>Flexible</li>
+        <li>Frameworks Not Needed</Frame>
+        </li>
+        <li>Good Browser Support</li>
+        <li>See Example</li>
+    </ul>
+</body>
+
+</html>
