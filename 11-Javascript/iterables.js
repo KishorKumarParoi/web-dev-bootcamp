@@ -32,5 +32,5 @@ console.log(cars);
 var year = 2020;
 if (year) {
     console.log(year);
-    let year = 2029;
+    // let year = 2029;
 }
