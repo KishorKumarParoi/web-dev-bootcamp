@@ -73,3 +73,4 @@ console.log(arr.sort(function (a, b) {
 }));
 
 console.log(duplicates);
+
