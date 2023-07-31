@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: cyan;
+        }
+
+        #show {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Javascript Try Catch</h2>
+    <p>Please Input Number between 5 and 10</p>
+    <input type="text" id="demo">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="show"></p>
+
+    <script>
+        function myFunction() {
+            const message = document.getElementById('show');
+            message.innerHTML = "";
+
+            let x = document.getElementById('demo').value;
+
+            try {
+                if (x.trim() == "") throw "empty";
+                if (isNaN(x)) throw "not a number";
+                x = Number(x);
+                if (x < 5) throw "too low";
+                if (x > 10) throw "too high";
+            } catch (err) {
+                message.innerHTML = "Input is " + err;
+            } finally {
+                document.getElementById('demo').value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
