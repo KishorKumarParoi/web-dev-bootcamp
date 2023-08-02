@@ -1,8 +1,8 @@
 const person = {
     // firstName: "Kishor",
     // LastName: "Paroi",
-    fullname: function () {
-        return this.firstName + " " + this.LastName;
+    fullName: function (city, country) {
+        return this.firstName + " " + this.LastName + ", " + city + " " + country;
     }
 }
 
@@ -11,4 +11,8 @@ const person2 = {
     LastName: "Paroi",
 }
 
-console.log(person.fullname.call(person2));
+// console.log(person.fullName.call(person2, 'Rajshahi', 'Bangladesh'));
+
+// call () method cann take arguments
+
+console.log(person.fullName.call(person2, "Rajshahi", "Bangladesh"));
