@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow vs Normal Function</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: salmon;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: cyan;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Let's find out difference between Arrow vs Normal Function</h1>
+
+    <button type="button" id="btn">Click Me</button>
+    <p id="demo"></p>
+
+    <script>
+        let hello = function () {
+            // return "Hello World!";
+            console.log(this);
+            document.getElementById('demo').innerHTML += this;
+        }
+
+        // on window load
+        window.addEventListener("load", hello);
+
+        // on button click
+        document.getElementById('btn').addEventListener('click', hello);
+
+
+        //  Arrow Function
+        hello = () => {
+            // return "Hello World!";
+            console.log(this);
+            document.getElementById('demo').innerHTML += this;
+        }
+
+        // on window load
+        window.addEventListener("load", hello);
+
+        // on button click
+        document.getElementById('btn').addEventListener('click', hello);
+    </script>
+</body>
+
+</html>
