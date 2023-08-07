@@ -36,8 +36,9 @@
 
 
 let x = 10;
+let y = 20;
+
 let jog = function () {
-    let y = 20;
     return function () {
         return x + y;
     };
