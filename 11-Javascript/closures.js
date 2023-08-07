@@ -32,7 +32,7 @@ var sum = function balance(intialBalance) {
 
 var myFunc = sum(10000);
 console.log(sum());
-// console.log(sum);
+console.log(sum);
 console.dir(myFunc);
 
 
