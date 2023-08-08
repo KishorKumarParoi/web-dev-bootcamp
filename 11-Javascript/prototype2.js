@@ -12,6 +12,8 @@ function Person(name, age) {
     return person;
 }
 
+
+// Permanent property
 Person.prototype = {
     eat() {
         console.log(`Person is eating`);
