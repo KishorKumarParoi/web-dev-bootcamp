@@ -30,3 +30,5 @@ console.log(Kishor);
 console.log(Kishor.play());
 console.log(Arnab);
 debugger;
+
+// prototype holo javascript er jkono function er ekta property jeta object k point kore 
