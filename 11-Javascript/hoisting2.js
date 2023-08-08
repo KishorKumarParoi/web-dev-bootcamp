@@ -16,12 +16,32 @@ console.log(a);
 let x; // x = undefined
 console.log(x);
 
-let language = "JavaScript";
-let LANGUAGE = "Python";
+// let language = "JavaScript";
+// let LANGUAGE = "Python";
+
+// function getLanguage() {
+//     if (!language) {
+//         let language = "Ruby";
+// console.log(language);
+//     }
+//     return language;
+// }
+
+// console.log(getLanguage());
+
+// let x; // x = undefined
+// console.log(x);
+
+var language = "JavaScript";
+var LANGUAGE = "Python";
 
 function getLanguage() {
+    var language; //
+    language = undefined;//
+
     if (!language) {
-        let language = "Ruby";
+        var language = "Ruby";
+        language = "Ruby";//
         // console.log(language);
     }
     return language;
