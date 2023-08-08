@@ -32,22 +32,40 @@ console.log(x);
 // let x; // x = undefined
 // console.log(x);
 
-var language = "JavaScript";
-var LANGUAGE = "Python";
+// var language = "JavaScript";
+// var LANGUAGE = "Python";
 
-function getLanguage() {
-    var language; //
-    language = undefined;//
+// function getLanguage() {
+//     var language; //
+//     language = undefined;//
 
-    if (!language) {
-        var language = "Ruby";
-        language = "Ruby";//
-        // console.log(language);
-    }
-    return language;
-}
+//     if (!language) {
+//         var language = "Ruby";
+//         language = "Ruby";//
+// console.log(language);
+//     }
+//     return language;
+// }
 
-console.log(getLanguage());
+// console.log(getLanguage());
+
+// ? Function Hoisting
+// function myFunc() {
+//     console.log("Hello from myFunc");
+// };
+
+// myFunc();
+
+
+// ! const hoisting
+
+// const func
+func();
+
+const func = function () {  // func = undefined; func = function(){} const can't be reassigned
+    console.log("Hello from myFunction of const variable hoisting");
+};
+
 
 debugger;
 
