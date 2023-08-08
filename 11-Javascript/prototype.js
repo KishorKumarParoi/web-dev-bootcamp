@@ -1,21 +1,30 @@
 console.log("hello world");
 
+const personMethods = {
+    eat() {
+        console.log(`Person is eating`);
+    },
+    sleep() {
+        console.log(`Person is sleeping`);
+    },
+    play() {
+        console.log(`Person is playing`);
+    },
+};
+
 function Person(name, age) {
     let person = {};
-    this.name = name;
-    this.age = age;
+    person.name = name;
+    person.age = age;
 
-    this.eat = function () {
-        console.log(`${this.name} is eating`);
-    }
-    this.sleep = function () {
-        console.log(`${this.name} is sleeping`);
-    }
-    // return person;
+    person.eat = personMethods.eat;
+    person.sleep = personMethods.sleep;
+    person.play = personMethods.play;
+    return person;
 }
 
-const Kishor = new Person("Kishor", 25);
-const Arnab = new Person("Arnab", 27);
+const Kishor = Person("Kishor", 25);
+const Arnab = Person("Arnab", 27);
 
 console.log(Kishor);
 console.log(Arnab);
