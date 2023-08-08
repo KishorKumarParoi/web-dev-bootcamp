@@ -75,3 +75,7 @@ debugger;
 // * variable and function declarations to the top of the current scope.
 // * var a; at the top of the scope.
 // * a = undefined; like placeholder in html by javascript
+
+// compile step and excuetion step
+// first allocate variable in compile time
+// then if I assign any variable in between this time javascript returns error
