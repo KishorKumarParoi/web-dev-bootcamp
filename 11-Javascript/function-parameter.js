@@ -1,4 +1,5 @@
-function myFunc(x, y = 10) {
+function myFunc(x, y = 20) {
+    console.log(arguments);
     console.log(x + y);
 }
 
