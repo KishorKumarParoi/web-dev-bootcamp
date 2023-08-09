@@ -19,4 +19,9 @@ function sumAll(...args) {
 
 console.log(sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
+// ? Arguments are Passed by Value
+// ? Changes to arguments are not visible(reflected) outside the function.
+// ? Objects are Passed by Reference
+// ? Changes to object properties are visible (reflected) outside the function.
+
 debugger;
