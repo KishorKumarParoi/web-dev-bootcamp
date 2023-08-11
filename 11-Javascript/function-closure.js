@@ -1,11 +1,11 @@
-// nested function
+// nested function with closure
 
 function temporary() {
     let count = 0;
 
     return function () {
         count += 1;
-        return count;
+        console.log(count);
     }
 
     // plus();
@@ -15,8 +15,13 @@ function temporary() {
 
 const add = temporary();
 add();
+console.dir(add);
+// console.dir(temporary)
 add();
+console.dir(add);
 add();
+console.dir(add);
+
 // count = -5;
 
 // console.log(a);
