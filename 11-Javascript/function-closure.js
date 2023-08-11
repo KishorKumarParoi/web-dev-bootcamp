@@ -3,13 +3,14 @@
 function add() {
     let count = 0;
 
-    function plus() {
+    return function plus() {
         count += 1;
+        return count;
     }
 
-    plus();
+    // plus();
 
-    return count;
+    // return count;
 }
 
 add();
