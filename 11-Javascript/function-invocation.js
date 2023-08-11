@@ -110,5 +110,7 @@ const member = {
 let memberfullName = Person2.fullName.bind(member);  // returns a function
 console.log(memberfullName());
 
+// Sometimes the bind() method has to be used to prevent losing this.
+
 debugger;
 
