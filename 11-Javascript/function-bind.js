@@ -14,12 +14,19 @@ const member = {
 };
 
 let memberfullName = Person.fullName.bind(member);  // returns a function
-console.log(memberfullName());
+// console.log(memberfullName());
 
 // sometimes the bind() method has is used to prevent this from getting lost in setTimeout() and setInterval() methods
 
-console.log(Person.fullName());  // this refers to the Person object
+// console.log(Person.fullName());  // this refers to the Person object
 setTimeout(Person.fullName, 5000); // this is lost here
+
+// console.log(Person.fullName.bind(member)());
+
+let display = Person.fullName.bind(Person);
+// console.log(display());
+setTimeout(display, 5000); // this refers to the Person object
+
 
 
 debugger;
