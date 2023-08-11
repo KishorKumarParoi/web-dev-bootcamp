@@ -11,3 +11,4 @@ function display(result) {
 let x = sum(10, 200, display);
 // display(x);
 
+// ? A callback is a function passed as an argument to another function.
