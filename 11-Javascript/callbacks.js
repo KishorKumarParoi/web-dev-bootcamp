@@ -1,11 +1,12 @@
 function sum(a, b) {
     let result = a + b;
-    return result;
+    return display(result);
 }
 
 function display(result) {
-    console.log(result)
+    console.log(result);
 }
 
-let x = sum(1, 2);
-display(x);
+let x = sum(10, 2);
+// display(x);
+
