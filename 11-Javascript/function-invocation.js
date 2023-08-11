@@ -20,4 +20,23 @@ function myFunc() {
 let x = myFunc();
 console.log(x);
 
+// invoking a function as a method
+const myObj = {
+    firstName: 'John',
+    lastName: 'Doe',
+    fullName: function () {
+        // return this.firstName + ' ' + this.lastName;
+        return this;
+    },
+    method: function () {
+        return this;
+    }
+};
+
+console.log(myObj.fullName());
+console.log(myObj.method());
+
+
+
 debugger;
+
