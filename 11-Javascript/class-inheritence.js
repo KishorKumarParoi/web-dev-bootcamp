@@ -42,4 +42,7 @@ console.log(newCar.carname);
 newCar.carname = 'Tesla';
 console.log(newCar.carname);
 
+
+// classes don't hoist, you have to define them before you use them
+
 debugger;
