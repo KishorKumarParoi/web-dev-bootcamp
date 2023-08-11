@@ -12,3 +12,12 @@ function mul(a, b) {
 
 console.log(mul(1, 2));
 // console.log(window.mul(10, 20));
+
+function myFunc() {
+    return this;
+}
+
+let x = myFunc();
+console.log(x);
+
+debugger;
