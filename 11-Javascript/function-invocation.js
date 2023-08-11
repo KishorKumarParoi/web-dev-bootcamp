@@ -51,5 +51,45 @@ const Kishor = new Person('Kishor', 'Naik');
 console.log(Kishor);
 console.log(Kishor.fullName());
 
+// invoking a function indirectly using call() and apply() methods
+// call() and apply() are used to invoke a function indirectly
+// call() and apply() are methods of the Function.prototype object
+// call() and apply() are used to set the this value explicitly
+// call() and apply() are used to invoke a function with a different this value
+// call() and apply() are used to invoke a function with a different context
+// call() and apply() are used to invoke a function with a different receiver
+// call() and apply() are used to invoke a function with a different scope
+// call() and apply() are used to invoke a function with a different execution context
+// call() and apply() are used to invoke a function with a different environment
+// call() and apply() are used to invoke a function with a different this binding
+// call() and apply() are used to invoke a function with a different this object
+// call() and apply() are used to invoke a function with a different this argument
+
+const obj = {
+    firstName: 'John',
+    lastName: 'Doe',
+    fullName: function (city, country) {
+        let text = `${this.firstName} ${this.lastName} is from ${city}, ${country}`;
+        // return this.firstName + ' ' + this.lastName;
+        return text;
+    }
+};
+
+const person1 = {
+    firstName: 'Kishor',
+    lastName: 'Paroi'
+}
+
+const person2 = {
+    firstName: 'Arnab',
+    lastName: 'Naik'
+}
+
+let fullName = obj.fullName();
+console.log(fullName);
+
+console.log(obj.fullName.call(person1, 'Rajshahi', 'Bangladesh'));
+console.log(obj.fullName.apply(person2, ['Rajshahi', 'Bangladesh']));
+
 debugger;
 
