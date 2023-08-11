@@ -36,20 +36,22 @@ const myObj = {
 console.log(myObj.fullName());
 console.log(myObj.method());
 
-// invoking a function as a constructor
+// ? invoking a function as a constructor
 
 function Person(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.fullName = function () {
-        return this.firstName + ' ' + this.lastName;
+    this.fullName = function (city, country) {
+        let text = `${this.firstName} ${this.lastName} is from ${city}, ${country}`;
+        // return this.firstName + ' ' + this.lastName;
         // return this;
+        return text;
     }
 }
 
 const Kishor = new Person('Kishor', 'Naik');
 console.log(Kishor);
-console.log(Kishor.fullName());
+console.log(Kishor.fullName('Dhaka', 'Bangladesh'));
 
 // invoking a function indirectly using call() and apply() methods
 // call() and apply() are used to invoke a function indirectly
