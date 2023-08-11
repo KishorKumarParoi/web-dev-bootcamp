@@ -24,4 +24,7 @@ console.log(secondCar.present());
 const myCar = new Model('Ford', 'Mustang');
 console.log(myCar.show());
 
+// ? Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.
+// ? To create a class inheritance, use the extends keyword.
+
 debugger;
