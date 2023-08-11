@@ -1,8 +1,14 @@
-let count = 0;
+// nested function
 
 function add() {
     let count = 0;
-    count++;
+
+    function plus() {
+        count += 1;
+    }
+
+    plus();
+
     return count;
 }
 
@@ -11,7 +17,7 @@ add();
 add();
 // count = -5;
 
-console.log(count);
+console.log(add());
 
 
 debugger;
