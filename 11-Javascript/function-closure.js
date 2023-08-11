@@ -1,3 +1,4 @@
+let count = 0;
 
 function add() {
     let count = 0;
@@ -10,7 +11,7 @@ add();
 add();
 // count = -5;
 
-console.log(add());
+console.log(count);
 
 
 debugger;
