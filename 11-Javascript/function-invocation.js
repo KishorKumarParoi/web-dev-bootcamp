@@ -36,7 +36,20 @@ const myObj = {
 console.log(myObj.fullName());
 console.log(myObj.method());
 
+// invoking a function as a constructor
 
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.fullName = function () {
+        return this.firstName + ' ' + this.lastName;
+        // return this;
+    }
+}
+
+const Kishor = new Person('Kishor', 'Naik');
+console.log(Kishor);
+console.log(Kishor.fullName());
 
 debugger;
 
