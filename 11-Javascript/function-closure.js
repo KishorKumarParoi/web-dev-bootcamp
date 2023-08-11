@@ -1,9 +1,9 @@
 // nested function
 
-function add() {
+function temporary() {
     let count = 0;
 
-    return function plus() {
+    return function () {
         count += 1;
         return count;
     }
@@ -13,12 +13,13 @@ function add() {
     // return count;
 }
 
+const add = temporary();
 add();
 add();
 add();
 // count = -5;
 
-console.log(add());
+// console.log(a);
 
 
 debugger;
