@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnChange</title>
+</head>
+
+<body>
+    <h1>Onchange </h1>
+    <p id="demo">
+        <button id="btn">Try It</button>
+    </p>
+
+    Enter your name: <input type="text" id="fname">
+    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+    <script>
+
+        document.getElementById('btn').onclick = function () {
+            document.getElementById('demo').innerHTML = Date();
+        }
+
+        document.body.onchange = function () {
+            const x = document.querySelector('#fname');
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</body>
+
+</html>
