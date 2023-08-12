@@ -11,14 +11,14 @@
     <h1>HTML Dom Events</h1>
     <p id="demo"></p>
     <p>
-        <button id="btn" onclick="backgroundChange()">Click Me</button>
+        <button id="btn" onclick="backgroundChange(this)">Click Me</button>
     </p>
     <script>
         let btn = document.getElementById("btn");
-        function backgroundChange() {
+        function backgroundChange(id) {
             btn.style.background = "cyan";
-            this.innerHTML = "Clicked";   // this indicates to window object
-            console.log(this);
+            id.innerHTML = "Clicked";   // this indicates to button object
+            console.log(id);
         }
     </script>
 </body>
