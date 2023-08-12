@@ -9,7 +9,9 @@
 
 <body>
     <h1>HTML Dom Events</h1>
-    <p id="demo"></p>
+    <p id="demo">
+        <button id="date">See Date</button>
+    </p>
     <p>
         <button id="btn" onclick="backgroundChange(this)">Click Me</button>
     </p>
@@ -19,6 +21,11 @@
             btn.style.background = "cyan";
             id.innerHTML = "Clicked";   // this indicates to button object
             console.log(id);
+        }
+
+        document.getElementById('date').onclick = displayDate;
+        function displayDate() {
+            document.querySelector('#demo').innerHTML = Date();
         }
     </script>
 </body>
