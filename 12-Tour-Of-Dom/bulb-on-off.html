@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb-on-off</title>
+</head>
+
+<body>
+
+    <img id="myimage" onmousedown="lighton()" onmouseup="lightoff()"
+        src="https://img.freepik.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?w=1380&t=st=1691862362~exp=1691862962~hmac=133b9ed73dc55f50f5b03491386afb4ab94924a578f45f639d5ac133934437ee"
+        width="400" height="400" />
+    <p>Click mouse and hold down!</p>
+
+    <script>
+        function lighton() {
+            document.getElementById('myimage').src = "https://img.freepik.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?w=1380&t=st=1691862362~exp=1691862962~hmac=133b9ed73dc55f50f5b03491386afb4ab94924a578f45f639d5ac133934437ee";
+        }
+        function lightoff() {
+            document.getElementById('myimage').src = "https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?size=626&ext=jpg";
+        }
+    </script>
+
+</body>
+
+</html>
