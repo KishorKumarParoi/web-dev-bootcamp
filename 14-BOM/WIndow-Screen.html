@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Screen</title>
+</head>
+
+<body>
+    <!-- screen.width -->
+    <!-- screen.height -->
+    <!-- screen.availWidth -->
+    <!-- screen.availHeight -->
+    <!-- screen.colorDepth -->
+    <!-- screen.pixelDepth -->
+
+    <h1>Window Screen </h1>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            "Screen Pixel Depth: " + screen.pixelDepth;
+        console.log(screen.pixelDepth);
+        console.log(screen.colorDepth);
+        console.log(screen.availHeight);
+        console.log(screen.availWidth);
+        console.log(screen.height);
+        console.log(screen.width);
+
+    </script>
+
+</body>
+
+</html>
