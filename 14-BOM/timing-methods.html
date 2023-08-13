@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Methods</title>
+</head>
+
+<body>
+    <button type="button" id="setTimeOut" onclick="setTimeout()">setTimeOut</button> <br>
+    <button type="button" id="clearTimeOut">clearTimeOut</button> <br>
+    <button type="button" id="setInterVal" onclick="setInterval()">setInterVal</button> <br>
+    <button type="button" id="clearInterval">clearInterval</button>
+    <p id="demo"></p>
+
+    <script>
+        let interval = document.getElementById("setInterVal");
+        let timeout = document.getElementById("setTimeOut");
+
+        // setInterval(setTimeout(() => {
+        //     alert("Hello");
+        // }, 3000), 2000);
+
+        setTimeout(function () {
+            let d = Date();
+            console.log(d);
+            document.getElementById("demo").innerHTML = d;
+        }, 1000);
+
+        setInterval(function () {
+            let d = Date();
+            console.log(d);
+            document.getElementById("demo").innerHTML = d;
+        }, 2000);
+
+
+    </script>
+
+</body>
+
+</html>
