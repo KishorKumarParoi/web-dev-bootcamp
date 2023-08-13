@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Naviagtion</title>
+</head>
+
+<body>
+    <div>
+        <p id="demo">Hello World Of DOM!</p>
+        <h1 id="h1">Let's Goooo!!!</h1>
+    </div>
+
+    <script>
+        let id = document.getElementById('demo');
+        console.log(id.parentNode.childNodes);
+        console.log(id.childNodes);
+
+        let way1 = document.getElementById('demo').firstChild.nodeValue;
+        let way2 = document.getElementById('demo').childNodes[0].nodeValue;
+        console.log(way1);
+        console.log(way2);
+        console.log(document.getElementById('demo').firstChild.nodeName);
+        console.log(document.getElementById('demo').firstChild.nodeType);
+        console.log(document.body);
+        console.log(document.documentElement);
+        console.log(document.getElementById('demo').nextSibling);
+        console.log("Hello Brooo");
+        console.log(document.querySelector('#h1').firstChild.nodeValue);
+        console.log(document.querySelector('#h1').childNodes[0].nodeValue);
+        console.log(document.querySelector('#h1').firstChild.nodeName);
+        console.log(document.querySelector('#h1').firstChild.nodeType);
+    </script>
+</body>
+
+</html>
