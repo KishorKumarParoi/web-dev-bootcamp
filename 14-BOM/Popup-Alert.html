@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Alert</title>
+</head>
+
+<body>
+    <h1>Confirm, Alert and Prompt</h1>
+    <p id="demo"></p>
+
+    <script>
+        let val = confirm("Do you want to continue?");
+        if (val) {
+            console.log("You Pressed OK");
+            let name = prompt("Enter your name", "Harry Potter");
+            if (name == "" || name == null) {
+                alert("You cancelled the prompt.");
+            }
+            else {
+                alert(name);
+            }
+        }
+        else {
+            console.log("You Pressed Cancel");
+            alert("You are not allowed to continue!");
+        }
+    </script>
+</body>
+
+</html>
