@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Nodes</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">This is a Paragraph 1</p>
+        <p id="p2">This is another Paragraph 2</p>
+    </div>
+
+    <script>
+        const para = document.createElement("p");
+        const h1 = document.createElement("h1");
+        h1.innerHTML = "Hello World";
+        const node = document.createTextNode("This is new Paragraph.");
+
+        para.appendChild(node);
+        document.getElementById("div1").appendChild(para);
+        console.log(h1);
+        document.getElementById("div1").insertBefore(h1, p2);
+
+        const parent = document.getElementById("div1");
+        const removeChild = document.getElementById("p2");
+        parent.removeChild(removeChild);
+    </script>
+</body>
+
+</html>
