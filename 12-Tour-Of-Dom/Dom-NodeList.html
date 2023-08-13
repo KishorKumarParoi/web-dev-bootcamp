@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Node List</title>
+</head>
+
+<body>
+    <h2>JavaScript HTML DOM</h2>
+
+    <p id="p1" class="para">Hello World!</p>
+
+    <p id="p2" class="para">Hello Norway!</p>
+
+    <p id="demo" class="para"></p>
+
+    <script>
+        const nodelist = document.querySelectorAll(".para");
+        const classes = document.getElementsByClassName("para");
+        const tags = document.getElementsByTagName("p");
+        console.log(nodelist);
+        console.log(classes);
+        console.log(tags);
+
+        for (let i = 0; i < nodelist.length; i++) {
+            nodelist[i].style.color = "red";
+        }
+
+        for (let i = 0; i < classes.length; i++) {
+            classes[i].style.color = "blue";
+        }
+
+        console.log(nodelist[0].innerHTML);
+        console.log(classes['p2'].innerHTML);
+
+    </script>
+</body>
+
+</html>
