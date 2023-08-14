@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History</title>
 </head>
+
 <body>
-    <div>
-        <input type="button" value="left" id="left">
-        <input type="button" value="right" id="right">
-        <p id="demo"></p>
-    </div>
+  <div>
+    <h1>Page One High Brooohhh</h1>
+    <a href="history2.html">Page two</a>
+    <button onclick="back()">Back</button>
+    <button onclick="forward()">Forward</button>
+    <button onclick="BackTo(2)">Go</button>
+    <button onclick="getHistory()">History length</button>
+    <p id="demo"></p>
+  </div>
 
-    <script>
-        document.getElementById("left").addEventListener("click", function(){
-            window.history.go(-1);
-        });
-
-        document.getElementById("right").addEventListener("click", function(){
-            window.history.go(1);
-        });
-
-        console.log(window.history.length);
-    </script>
+  <script src="history.js"></script>
 </body>
+
 </html>
