@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="left" id="left">
+        <input type="button" value="right" id="right">
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        document.getElementById("left").addEventListener("click", function(){
+            window.history.go(-1);
+        });
+
+        document.getElementById("right").addEventListener("click", function(){
+            window.history.go(1);
+        });
+
+        console.log(window.history.length);
+    </script>
+</body>
+</html>
