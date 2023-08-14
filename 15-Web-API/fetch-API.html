@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+
+<body>
+    <button onclick="getData()">Fetch API</button>
+    <p id="demo"></p>
+
+    <script>
+        let demo = document.getElementById('demo');
+
+        function getData() {
+            fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}")
+                // .then(res => console.log(res));
+                .then(res => res.text())
+                .then(data => {
+                    console.log(data);
+                    demo.innerHTML = data;
+                });
+        }
+
+        console.log("Hello");
+
+    </script>
+</body>
+
+</html>
