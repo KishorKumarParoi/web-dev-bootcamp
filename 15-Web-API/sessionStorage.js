@@ -1,5 +1,5 @@
 function setSessionStorageItem(key, value) {
-    SessionStorage.setItem(key, value);
+    sessionStorage.setItem(key, value);
     return sessionStorage.length
 }
 
