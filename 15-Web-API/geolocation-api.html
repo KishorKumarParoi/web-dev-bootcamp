@@ -23,6 +23,7 @@
             if (navigator.geolocation) {
                 // navigator.geolocation.getCurrentPosition(showPosition, showError);
                 navigator.geolocation.watchPosition(showPosition, showError);
+                navigator.geolocation.clearWatch();
             }
             else {
                 x.innerHTML = "Geolocation is not supported by this browser.";
