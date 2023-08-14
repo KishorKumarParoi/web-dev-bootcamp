@@ -6,3 +6,5 @@ while (i < 1000000000) {
 }
 
 // demo.innerHTML = i;  // doesn't work demo here
+
+postMessage(i);
