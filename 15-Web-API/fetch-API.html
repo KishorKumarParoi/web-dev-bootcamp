@@ -26,9 +26,10 @@
         // }
 
         async function getData() {
-            const res = await fetch("http://127.0.0.1:5500/web-dev.txt");
-            const data = await res.text();
-            // const data = await res.json();
+            // const res = await fetch("http://127.0.0.1:5500/web-dev.txt");
+            const res = await fetch("http://127.0.0.1:5500/15-Web-API/data.json");
+            // const data = await res.text();
+            const data = await res.json();
             console.log(data);
             console.log("Hello2");
         }
