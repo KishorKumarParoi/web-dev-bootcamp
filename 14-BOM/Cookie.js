@@ -51,3 +51,16 @@ function checkCookie(cname, exdays) {
     }
 }
 
+function checkAgeCookie(cname, exdays) {
+    let age = getCookie(cname);
+
+    if (age != "") {
+        alert("Your age is " + age);
+    }
+    else {
+        age = prompt("Please enter your age:", "18");
+        if (age != null && age != "") {
+            setCookie(cname, age, exdays);
+        }
+    }
+}
