@@ -37,7 +37,7 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie(cname) {
+function checkCookie(cname, exdays) {
     let name = getCookie(cname);
 
     if (name != "") {
@@ -46,7 +46,7 @@ function checkCookie(cname) {
     else {
         name = prompt("Please enter your name:", "Harry Potter");
         if (name != null && name != "") {
-            setCookie(cname, name, 30);
+            setCookie(cname, name, exdays);
         }
     }
 }
