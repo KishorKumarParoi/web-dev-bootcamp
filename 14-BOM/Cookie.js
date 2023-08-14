@@ -2,8 +2,9 @@ const setName = document.getElementById('setName');
 const setUserName = document.getElementById('setUserName');
 const getName = document.getElementById('getName');
 const getUserName = document.getElementById('getUserName');
+const checkcookie = document.getElementById('checkCookie');
 
-// console.log(setName, setUserName, getName, getUserName);
+console.log(setName, setUserName, getName, getUserName);
 // setName.innerHTML = "Kishor";
 // console.log(setName);
 document.cookie = null;
@@ -35,3 +36,18 @@ function getCookie(cname) {
 
     return "";
 }
+
+function checkCookie(cname) {
+    let name = getCookie(cname);
+
+    if (name != "") {
+        alert("Welcome again " + name);
+    }
+    else {
+        name = prompt("Please enter your name:", "Harry Potter");
+        if (name != null && name != "") {
+            setCookie(cname, name, 30);
+        }
+    }
+}
+
