@@ -15,7 +15,7 @@
         let demo = document.getElementById('demo');
 
         function getData() {
-            fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}")
+            fetch("http://127.0.0.1:5500/web-dev.txt")
                 // .then(res => console.log(res));
                 .then(res => res.text())
                 .then(data => {
