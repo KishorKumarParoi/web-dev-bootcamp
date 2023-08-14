@@ -24,6 +24,11 @@
                     worker = new Worker("worker.js");
                 }
 
+                // listener for worker/messages
+                worker.onmessage = function (event) {
+                    document.getElementById("demo").innerHTML = event.data;
+                }
+
             }
             else {
                 alert("Browser has no Worker");
