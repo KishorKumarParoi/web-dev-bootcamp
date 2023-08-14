@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Worker-API</title>
+</head>
+
+<body>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <button onclick="alert(" hello")">click</button>
+
+    <script>
+
+        function startWorker() {
+            if (typeof Worker !== undefined) {
+                alert("Browser has Worker");
+            }
+            else {
+                alert("Browser has no Worker");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
