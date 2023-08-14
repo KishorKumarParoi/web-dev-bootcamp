@@ -10,8 +10,8 @@
 <body>
     <button type="button" id="setTimeOut" onclick="startTimeOut()">setTimeOut</button> <br>
     <button type="button" id="clearTimeOut" onclick="endTimeOut()">clearTimeOut</button> <br>
-    <button type="button" id="setInterVal" onclick="setInterval(this)">setInterVal</button> <br>
-    <button type="button" id="clearInterval" onclick="clearInterval()">clearInterval</button>
+    <button type="button" id="setInterVal" onclick="startInterval()">setInterVal</button> <br>
+    <button type="button" id="clearInterval" onclick="endInterval()">clearInterval</button>
     <p id="demo"></p>
 
     <script>
@@ -21,7 +21,7 @@
 
         function startTimeOut() {
             setTimeout(function () {
-                p.innerHTML = "3 sec over"
+                p.innerHTML = Date();
             }, 3000);
         }
 
@@ -29,6 +29,18 @@
             clearTimeout(startTimeOut);
             p.innerHTML = "clearTimeOut before 3 sec";
             console.log("clearTimeOut before 3 sec");
+        }
+
+        function startInterval() {
+            setInterval(function () {
+                p.innerHTML = Date();
+            }, 1000);
+        }
+
+        function endInterval() {
+            clearInterval(startInterval);
+            p.innerHTML = "clearInterval before 1 sec";
+            console.log("clearInterval before 1 sec");
         }
 
     </script>
