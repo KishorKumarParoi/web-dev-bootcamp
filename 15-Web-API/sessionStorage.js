@@ -1,18 +1,18 @@
-function setLocalStorageItem(key, value) {
-    localStorage.setItem(key, value);
-    return localStorage.length;
+function setSessionStorageItem(key, value) {
+    SessionStorage.setItem(key, value);
+    return SessionStorage.length;
 }
 
-function getLocalStorageItem(key) {
-    return localStorage.getItem(key);
+function getSessionStorageItem(key) {
+    return SessionStorage.getItem(key);
 }
 
-function removeLocalStorageItem(key) {
-    localStorage.removeItem(key);
+function removeSessionStorageItem(key) {
+    SessionStorage.removeItem(key);
 }
 
-function clearLocalStorage() {
-    localStorage.clear();
+function clearSessionStorage() {
+    SessionStorage.clear();
 }
 
-document.getElementById("demo").innerHTML = "localStorage : " + localStorage.length + " items";
+document.getElementById("demo").innerHTML = "SessionStorage : " + SessionStorage.length + " items";
