@@ -8,31 +8,27 @@
 </head>
 
 <body>
-    <button type="button" id="setTimeOut" onclick="setTimeout(this)">setTimeOut</button> <br>
-    <button type="button" id="clearTimeOut" onclick="clearTimeout">clearTimeOut</button> <br>
+    <button type="button" id="setTimeOut" onclick="startTimeOut()">setTimeOut</button> <br>
+    <button type="button" id="clearTimeOut" onclick="endTimeOut()">clearTimeOut</button> <br>
     <button type="button" id="setInterVal" onclick="setInterval(this)">setInterVal</button> <br>
     <button type="button" id="clearInterval" onclick="clearInterval()">clearInterval</button>
     <p id="demo"></p>
 
     <script>
-        let interval, timeout;
+        const timeout = document.getElementById("setTimeOut");
+        const interval = document.getElementById("setInterVal");
+        const p = document.getElementById("demo");
 
-        function myTimer() {
-            let d = new Date();
-            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        function startTimeOut() {
+            setTimeout(function () {
+                p.innerHTML = "3 sec over"
+            }, 3000);
         }
 
-        function setTimeout(timeout) {
-            timeout = setTimeout(myTimer, 3000);
-        }
-        function setInterval(interval) {
-            interval = setInterval(myTimer, 1000);
-        }
-        function clearTimeout() {
-            clearTimeout(timeout);
-        }
-        function clearInterval() {
-            clearInterval(interval);
+        function endTimeOut() {
+            clearTimeout(startTimeOut);
+            p.innerHTML = "clearTimeOut before 3 sec";
+            console.log("clearTimeOut before 3 sec");
         }
 
     </script>
