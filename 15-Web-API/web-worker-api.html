@@ -13,10 +13,16 @@
     <button onclick="alert('hello')">click</button>
 
     <script>
-
+        let worker;
         function startWorker() {
             if (typeof Worker !== undefined) {
                 alert("Browser has Worker");
+
+                if (typeof worker == undefined) {
+                    // create a new worker
+                    worker = new Worker("worker.js");
+                }
+
             }
             else {
                 alert("Browser has no Worker");
