@@ -1,5 +1,6 @@
 function setLocalStorageItem(key, value) {
     localStorage.setItem(key, value);
+    return localStorage.length;
 }
 
 function getLocalStorageItem(key) {
