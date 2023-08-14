@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validation API</title>
 </head>
+
 <body>
     <h1>Validation API</h1>
     <div>
-        <input type="number" name="number" id="id1" min="100" max="300" size="40" required> 
+        <input type="number" name="number" id="id1" min="100" max="300" size="40" required>
         <input type="button" value="OK" id="btn">
         <p id="demo"></p>
     </div>
@@ -20,14 +22,24 @@
         // obj = Number(obj);
         // console.log(typeof obj);
 
-        function myFunction(){
-        const obj = document.getElementById("id1");
+        function myFunction() {
+            const obj = document.getElementById("id1");
 
-            if(!obj.checkValidity()){
-                msg.innerHTML = obj.validationMessage;
-                alert("Please enter a number between 100 and 300");
+            if (obj.validity.rangeOverflow) {
+                obj.setCustomValidity("Value must be less than or equal to 300");
             }
-            else{
+            else if (obj.validity.rangeUnderflow) {
+                obj.setCustomValidity("Value must be greater than or equal to 100");
+            }
+            else if (obj.validity.valueMissing) {
+                obj.setCustomValidity("Value Missing");
+            }
+
+            if (!obj.checkValidity()) {
+                msg.innerHTML = obj.validationMessage;
+                // alert("Please enter a number between 100 and 300");
+            }
+            else {
                 msg.innerHTML = "Input OK";
             }
         }
@@ -35,4 +47,5 @@
         document.getElementById("btn").addEventListener("click", myFunction);
     </script>
 </body>
+
 </html>
