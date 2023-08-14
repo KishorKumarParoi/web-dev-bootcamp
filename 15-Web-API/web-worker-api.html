@@ -16,10 +16,10 @@
     <script>
         let worker;
         function startWorker() {
-            if (typeof Worker !== undefined) {
+            if (typeof Worker !== 'UNDEFundefined') {
                 alert("Browser has Worker");
 
-                if (typeof worker == undefined) {
+                if (typeof worker == 'undefined') {
                     // create a new worker
                     worker = new Worker("worker.js");
                 }
@@ -27,11 +27,20 @@
                 // listener for worker/messages
                 worker.onmessage = function (event) {
                     document.getElementById("demo").innerHTML = event.data;
-                }
-
+                };
             }
             else {
                 alert("Browser has no Worker");
+            }
+        }
+
+        function stopWorker() {
+            if (worker !== 'undefined') {
+                worker.terminate();
+                worker = undefined;
+            }
+            else {
+                alert("Worker is not running");
             }
         }
 
