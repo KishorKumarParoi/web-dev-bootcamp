@@ -15,30 +15,30 @@
     <input id="id1" type="number" min="100" max="300" required>
     <button onclick="myFunction()">OK</button>
     
-    <p>If the number is greater than 100 (the input's max attribute), an error message will be displayed.</p>
     <p id="demo"></p>
 
     <script>
       function myFunction(){
-          let msg = document.getElementById("id1");
+          const obj = document.getElementById("id1");
+          let msg = document.getElementById("demo");
 
-          if (msg.validity.rangeOverflow) {
-              document.getElementById("demo").innerHTML = msg.validationMessage;
+          if (obj.validity.rangeOverflow) {
+              obj.setCustomValidity("Value is greater than 300");
           }
 
-          if (msg.validity.rangeUnderflow) {
-              document.getElementById("demo").innerHTML = msg.validationMessage;
+          if (obj.validity.rangeUnderflow) {
+              obj.setCustomValidity("Value is less than 100");
           }
 
-          if (msg.validity.valueMissing) {
-              document.getElementById("demo").innerHTML = msg.validationMessage;
+          if (obj.validity.valueMissing) {
+            obj.setCustomValidity("Please enter a number");
           }
 
-          if (!msg.checkValidity()) {
-              document.getElementById("demo").innerHTML = msg.validationMessage;
+          if (!obj.checkValidity()) {
+              msg,innerHTML = obj.validationMessage;
           }
           else{
-                document.getElementById("demo").innerHTML = "Input OK";
+                msg.innerHTML = "Input OK";
           }
       }
     </script>
