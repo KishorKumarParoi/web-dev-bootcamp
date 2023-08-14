@@ -22,20 +22,23 @@
           const obj = document.getElementById("id1");
           let msg = document.getElementById("demo");
 
-          if (obj.validity.rangeOverflow) {
-              obj.setCustomValidity("Value is greater than 300");
-          }
+          console.log(obj.value);
+          console.log(msg.innerHTML);
 
-          if (obj.validity.rangeUnderflow) {
-              obj.setCustomValidity("Value is less than 100");
-          }
+        //   if (obj.validity.rangeOverflow) {
+        //       obj.setCustomValidity("Value is greater than 300");
+        //   }
 
-          if (obj.validity.valueMissing) {
-            obj.setCustomValidity("Please enter a number");
-          }
+        //   if (obj.validity.rangeUnderflow) {
+        //       obj.setCustomValidity("Value is less than 100");
+        //   }
+
+        //   if (obj.validity.valueMissing) {
+        //     obj.setCustomValidity("Please enter a number");
+        //   }
 
           if (!obj.checkValidity()) {
-              msg,innerHTML = obj.validationMessage;
+              msg.innerHTML = obj.validationMessage;
           }
           else{
                 msg.innerHTML = "Input OK";
