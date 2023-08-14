@@ -1,51 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validation-Api</title>
+    <title>Validation API</title>
 </head>
-
 <body>
-    <h2>JavaScript Validation</h2>
-    
-    <p>Enter a number and click OK:</p>
-    
-    <input id="id1" type="number" min="100" max="300" required>
-    <button onclick="myFunction()">OK</button>
-    
-    <p id="demo"></p>
+    <h1>Validation API</h1>
+    <div>
+        <input type="number" name="number" id="id1" min="100" max="300" size="40" required> 
+        <input type="button" value="OK" id="btn">
+        <p id="demo"></p>
+    </div>
 
     <script>
-      function myFunction(){
-          const obj = document.getElementById("id1");
-          let msg = document.getElementById("demo");
+        let msg = document.getElementById("demo");
+        // console.log(obj.value);
 
-          console.log(obj.value);
-          console.log(msg.innerHTML);
+        // obj = Number(obj);
+        // console.log(typeof obj);
 
-        //   if (obj.validity.rangeOverflow) {
-        //       obj.setCustomValidity("Value is greater than 300");
-        //   }
+        function myFunction(){
+        const obj = document.getElementById("id1");
 
-        //   if (obj.validity.rangeUnderflow) {
-        //       obj.setCustomValidity("Value is less than 100");
-        //   }
-
-        //   if (obj.validity.valueMissing) {
-        //     obj.setCustomValidity("Please enter a number");
-        //   }
-
-          if (!obj.checkValidity()) {
-              msg.innerHTML = obj.validationMessage;
-          }
-          else{
+            if(!obj.checkValidity()){
+                msg.innerHTML = obj.validationMessage;
+                alert("Please enter a number between 100 and 300");
+            }
+            else{
                 msg.innerHTML = "Input OK";
-          }
-      }
+            }
+        }
+
+        document.getElementById("btn").addEventListener("click", myFunction);
     </script>
-
 </body>
-
 </html>
