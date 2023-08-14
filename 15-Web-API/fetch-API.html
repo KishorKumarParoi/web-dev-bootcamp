@@ -14,14 +14,22 @@
     <script>
         let demo = document.getElementById('demo');
 
-        function getData() {
-            fetch("http://127.0.0.1:5500/web-dev.txt")
-                // .then(res => console.log(res));
-                .then(res => res.text())
-                .then(data => {
-                    console.log(data);
-                    demo.innerHTML = data;
-                });
+        // .then()
+        // function getData() {
+        //     fetch("http://127.0.0.1:5500/web-dev.txt")
+        //         // .then(res => console.log(res));
+        //         .then(res => res.text())
+        //         .then(data => {
+        //             console.log(data);
+        //             demo.innerHTML = data;
+        //         });
+        // }
+
+        async function getData() {
+            const res = await fetch("http://127.0.0.1:5500/web-dev.txt");
+            const data = await res.tex();
+            console.log(data);
+            console.log("Hello2");
         }
 
         console.log("Hello");
