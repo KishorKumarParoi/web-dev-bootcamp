@@ -27,7 +27,8 @@
 
         async function getData() {
             const res = await fetch("http://127.0.0.1:5500/web-dev.txt");
-            const data = await res.tex();
+            const data = await res.text();
+            // const data = await res.text();
             console.log(data);
             console.log("Hello2");
         }
