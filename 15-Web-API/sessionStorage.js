@@ -1,18 +1,18 @@
 function setSessionStorageItem(key, value) {
     SessionStorage.setItem(key, value);
-    return SessionStorage.length;
+    return sessionStorage.length
 }
 
 function getSessionStorageItem(key) {
-    return SessionStorage.getItem(key);
+    return sessionStorage.getItem(key);
 }
 
 function removeSessionStorageItem(key) {
-    SessionStorage.removeItem(key);
+    sessionStorage.removeItem(key);
 }
 
 function clearSessionStorage() {
-    SessionStorage.clear();
+    sessionStorage.clear();
 }
 
-document.getElementById("demo").innerHTML = "SessionStorage : " + SessionStorage.length + " items";
+document.getElementById("demo").innerHTML = "SessionStorage : " + sessionStorage.length + " items";
