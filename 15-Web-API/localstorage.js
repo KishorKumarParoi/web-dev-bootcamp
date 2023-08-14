@@ -14,3 +14,5 @@ function removeLocalStorageItem(key) {
 function clearLocalStorage() {
     localStorage.clear();
 }
+
+document.getElementById("demo").innerHTML = "localStorage : " + localStorage.length + " items";
