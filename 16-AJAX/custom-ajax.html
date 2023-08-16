@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+</head>
+
+<body>
+    <h1>XMLHttpRequest</h1>
+    <div>
+        <div id="result"></div>
+        <button id="btn">Click me</button> <br>
+        <div id="demo"></div>
+    </div>
+
+    <script>
+        // function loadData() {
+        //     // creates a request object
+        //     let xhr = new XMLHttpRequest();
+
+        //     // prepares a request what to do upon getting response
+        //     xhr.onload = function () {
+        //         let container = document.getElementById('result');
+        //         container.innerHTML = this.responseText;
+        //     }
+
+        //     // open a powerpacked request
+        //     xhr.open('GET', './ajax_info.txt', true);
+
+        //     // sending custom request header
+        //     xhr.setRequestHeader('My_Dream', 'I want to be a web developer')
+
+        //     // now send request
+        //     xhr.send();
+        // }
+
+        function loadData(url, callback) {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                callback(this.responseText);
+            }
+            xhr.open('GET', url, true);
+            xhr.send();
+        }
+
+        function callback1(data) {
+            let container = document.getElementById('result');
+            container.innerHTML = data;
+        }
+
+        function callback2(data) {
+            let container = document.getElementById('demo');
+            container.innerHTML = data;
+        }
+
+        let url = './ajax_info.txt';
+        let url2 = './ajax_info2.txt';
+
+        document.getElementById('btn').addEventListener('click', function () {
+            // loadData(url, callback1);
+            loadData(url2, callback2);
+        });
+
+    </script>
+</body>
+
+</html>
