@@ -28,6 +28,9 @@
             // open a powerpacked request
             xhr.open('GET', './ajax_info.txt', true);
 
+            // sending custom request header
+            xhr.setRequestHeader('My_Dream', 'I want to be a web developer')
+
             // now send request
             xhr.send();
         }
