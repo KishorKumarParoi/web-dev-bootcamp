@@ -21,9 +21,12 @@
         function loadData(url, callback) {
             let xhr = new XMLHttpRequest;
 
-            xhr.onload = function () {
+            xhr.onreadystatechange = function () {
                 console.log("Hello World Second");
-                callback(this.responseText);
+
+                if (this.status == 200 && this.readyState == 4) {
+                    callback(this.responseText);
+                }
             }
 
             xhr.open('GET', url, true);
