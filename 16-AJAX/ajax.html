@@ -29,7 +29,12 @@
                 }
             }
 
+            // xhr.open('GET', url + Math.random(), true);
+            // xhr.open('GET', url + "?fname=Kishor&aim=softwareengineer", true);
+            // xhr.open('POST', url, true);
             xhr.open('GET', url, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
             xhr.send();
             console.log("Hello World First");
         }
