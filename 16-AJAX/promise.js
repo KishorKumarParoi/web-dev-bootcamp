@@ -61,32 +61,93 @@
 
 // ? Promise
 
-console.log('Task 1');
+// console.log('Task 1');
 
-const Status = true;
+// const Status = true;
 
 // Promise definition
 // producing code
-const promise = new Promise(function (resolve, reject) {
+// const promise = new Promise(function (resolve, reject) {
 
-    setTimeout(function () {
-        if (Status) {
-            resolve('Task 2');
-        }
-        else {
-            reject('failed!');
-        }
-    }, 2000);
-});
+//     setTimeout(function () {
+//         if (Status) {
+//             resolve('Task 2');
+//         }
+//         else {
+//             reject('failed!');
+//         }
+//     }, 2000);
+// });
 
 // Promise Call 
 // consuming code
-promise
-    .then((val) => {
+// promise
+//     .then((val) => {
+//         console.log(val);
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     });
+
+// console.log('Task 3');
+
+const paymentSuccess = true;
+const marks = 89;
+
+function courseEnroll() {
+    console.log("Enrolling to course...");
+
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (paymentSuccess) {
+                resolve();
+            }
+            else {
+                reject("Payment Failed!");
+            }
+        }, 2000);
+    });
+}
+
+function progress() {
+    console.log("Course is ongoing");
+
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (marks >= 80) {
+                resolve();
+            }
+            else {
+                reject("You are not Eligible for getting Certificate");
+            }
+        }, 3000);
+    });
+}
+
+function getCertificate() {
+    console.log("Preparing your certificate .... ");
+    console.log('Keep Patience');
+
+    return new Promise(function (resolve) {
+        setTimeout(() => {
+            resolve("Congratulations! You got your certificate.");
+        }, 1000);
+    });
+}
+
+// courseEnroll(function () {
+//     progress(getCertificate)
+// });
+
+courseEnroll()
+    .then(progress)
+    .then(getCertificate)
+    .then(function (val) {
         console.log(val);
     })
-    .catch((err) => {
+    .catch(function (err) {
         console.log(err);
-    });
+    })
 
-console.log('Task 3');
+
+// debugger;
