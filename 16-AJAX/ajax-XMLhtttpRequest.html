@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+</head>
+
+<body>
+    <h1>XMLHttpRequest</h1>
+    <div>
+        <button id="btn" onclick="loadData()">Click me</button> <br>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function loadData() {
+            // creates a request object
+            let xhr = new XMLHttpRequest();
+
+            // prepares a request what to do upon getting response
+            xhr.onload = function () {
+                let container = document.getElementById('result');
+                container.innerHTML = this.responseText;
+            }
+
+            // open a powerpacked request
+            xhr.open('GET', './ajax_info.txt', true);
+
+            // now send request
+            xhr.send();
+        }
+
+    </script>
+</body>
+
+</html>
