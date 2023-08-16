@@ -45,4 +45,13 @@ Promise.all([promise1, promise2])
         console.log(err.message);
     });
 
+Promise.race([promise1, promise2])
+    .then((res) => {
+        console.log('Answer : ');
+        console.log(res);
+    })
+    .catch((err) => {
+        console.log(err.message);
+    });
+
 debugger;
