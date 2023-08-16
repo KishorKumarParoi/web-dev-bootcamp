@@ -39,6 +39,7 @@
         function loadData(url, callback) {
             let xhr = new XMLHttpRequest();
             xhr.onload = function () {
+                console.log("Hello World Two");
                 callback(this.responseText);
             }
             xhr.open('GET', url, true);
