@@ -1,4 +1,4 @@
-const hasMeeting = true;
+const hasMeeting = false;
 
 const meeting = new Promise((resolve, reject) => {
     if (!hasMeeting) {
@@ -15,10 +15,16 @@ const meeting = new Promise((resolve, reject) => {
     }
 });
 
+const addToCalendar = (meetingDetails) => {
+    const txt = `${meetingDetails.Name} will took place in ${meetingDetails.Location} at ${meetingDetails.Time} with ${meetingDetails.Food}`;
+    return Promise.resolve(txt);
+}
+
 
 meeting
+    .then(addToCalendar)
     .then((val) => {
-        console.log(JSON.stringify(val));
+        console.log(val);
     })
     .catch((err) => {
         console.log(err.message);
