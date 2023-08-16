@@ -135,19 +135,31 @@ function getCertificate() {
     });
 }
 
-// courseEnroll(function () {
-//     progress(getCertificate)
-// });
-
-courseEnroll()
-    .then(progress)
-    .then(getCertificate)
-    .then(function (val) {
-        console.log(val);
-    })
-    .catch(function (err) {
-        console.log(err);
-    })
+// courseEnroll()
+//     .then(progress)
+//     .then(getCertificate)
+//     .then(function (val) {
+//         console.log(val);
+//     })
+//     .catch(function (err) {
+//         console.log(err);
+//     })
 
 
 // debugger;
+
+// ? Async-Await
+
+async function course() {
+    try {
+        await courseEnroll();
+        await progress();
+        let msg = await getCertificate();
+        console.log(msg);
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
+
+course();
