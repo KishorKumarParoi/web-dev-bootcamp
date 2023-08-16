@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Intro</title>
+</head>
+
+<body>
+
+    <div id="demo">
+        <h2>The XMLHttpRequest Object</h2>
+        <button type="button" onclick="loadData()">Change Content</button>
+    </div>
+
+    <script>
+        // AJAX is a developer's dream, because you can:
+        // Read data from a web server - after the page has loaded
+        // Update a web page without reloading the page
+        // Send data to a web server - in the background
+        // AJAX = Asynchronous JavaScript And XML.
+
+        function loadData() {
+            // create a new request object
+            const xhr = new XMLHttpRequest();
+
+            // what to do when response arrives
+            xhr.onload = function () {
+                const container = document.getElementById('demo');
+                container.innerHTML = xhr.responseText;
+            }
+
+            // prepare request - methods : GET, POST, DELETE, PUT, PATCH
+            xhr.open('GET', "./ajax_info.txt", true);
+
+            // send request
+            xhr.send();
+        }
+
+    </script>
+</body>
+
+</html>
