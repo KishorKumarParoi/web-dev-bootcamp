@@ -1,4 +1,4 @@
-const hasMeeting = false;
+const hasMeeting = true;
 
 const meeting = new Promise((resolve, reject) => {
     if (!hasMeeting) {
@@ -16,24 +16,24 @@ const meeting = new Promise((resolve, reject) => {
 });
 
 
-// meeting
-//     .then((val) => {
-//         console.log(val);
-//     })
-//     .catch((err) => {
+meeting
+    .then((val) => {
+        console.log(JSON.stringify(val));
+    })
+    .catch((err) => {
+        console.log(err.message);
+    })
+
+// async function office() {
+//     try {
+//         let msg = await meeting;
+//         console.log(msg);
+//     }
+//     catch (err) {
 //         console.log(err);
-//     })
+//     }
+// }
 
-async function office() {
-    try {
-        let msg = await meeting;
-        console.log(msg);
-    }
-    catch (err) {
-        console.log(err);
-    }
-}
+// office();
 
-office();
-
-// debugger;
+debugger;
