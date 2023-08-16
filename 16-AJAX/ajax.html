@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+
+<body>
+    <h1>AJAX</h1>
+    <div>
+        <p id="demo"></p>
+        <button id="btn">CLick Mehh</button>
+        <p id="res"></p>
+    </div>
+
+
+    <script>
+
+        function loadData(url, callback) {
+            let xhr = new XMLHttpRequest;
+
+            xhr.onload = function () {
+                console.log("Hello World Second");
+                callback(this.responseText);
+            }
+
+            xhr.open('GET', url, false);
+            xhr.send();
+            console.log("Hello World First");
+        }
+
+        function callback1(data) {
+            let container = document.getElementById('demo');
+            container.innerHTML = data;
+        }
+
+        function callback2(data) {
+            let container = document.getElementById('res');
+            container.innerHTML = data;
+        }
+
+        document.getElementById('btn').addEventListener('click', function () {
+            console.log('clicked');
+            loadData('./ajax_info.txt', callback1);
+            loadData('./ajax_info2.txt', callback2);
+            console.log('finished');
+        })
+
+    </script>
+
+</body>
+
+</html>
