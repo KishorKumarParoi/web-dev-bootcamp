@@ -43,6 +43,7 @@
             }
             xhr.open('GET', url, true);
             xhr.send();
+            console.log("Hello World");
         }
 
         function callback1(data) {
@@ -59,8 +60,10 @@
         let url2 = './ajax_info2.txt';
 
         document.getElementById('btn').addEventListener('click', function () {
+            console.log('clicked');
             loadData(url, callback1);
             loadData(url2, callback2);
+            console.log('finished');
         });
 
     </script>
