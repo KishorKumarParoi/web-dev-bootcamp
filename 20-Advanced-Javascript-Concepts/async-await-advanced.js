@@ -21,25 +21,26 @@ const addToCalendar = (meetingDetails) => {
 }
 
 
-meeting
-    .then(addToCalendar)
-    .then((val) => {
-        console.log(val);
-    })
-    .catch((err) => {
-        console.log(err.message);
-    })
+// meeting
+//     .then(addToCalendar)
+//     .then((val) => {
+//         console.log(val);
+//     })
+//     .catch((err) => {
+//         console.log(err.message);
+//     })
 
-// async function office() {
-//     try {
-//         let msg = await meeting;
-//         console.log(msg);
-//     }
-//     catch (err) {
-//         console.log(err);
-//     }
-// }
+async function office() {
+    try {
+        const meetingDetails = await meeting;
+        let msg = await addToCalendar(meetingDetails);
+        console.log(msg);
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
 
-// office();
+office();
 
 debugger;
