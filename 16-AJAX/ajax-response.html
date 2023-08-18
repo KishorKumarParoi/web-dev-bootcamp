@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Response</title>
+</head>
+
+<body>
+    <h1>Ajax Response</h1>
+    <div>
+        <button id="btn" onclick="loadData()">Click me</button> <br>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function loadData(url, callback) {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                callback(this.responseText);
+            }
+            xhr.open('GET', url, true);
+            xhr.send();
+        }
+
+        function callback1(callback) {
+            document.getElementById('res').
+        }
+
+    </script>
+</body>
+
+</html>
