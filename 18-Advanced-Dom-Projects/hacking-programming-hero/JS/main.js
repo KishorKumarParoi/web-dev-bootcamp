@@ -90,35 +90,28 @@ function markMileStone(checkbox, id) {
     doneList.appendChild(item);
   } else {
     doneList.removeChild(item);
-    milestones.appendChild(item);
-
-    // console.log(typeof milestones.childNodes);
-    // console.log(eachElementId);
-
-    // let sortedEachElementId = eachElementId.sort(function (a, b) {
-    //   return a - b;
-    // });
-    // console.log(sortedEachElementId);
-    // let length = sortedEachElementId.length;
+    // milestones.appendChild(item);
 
     for (let i = 1; i <= milestonesData.length; i++) {
       const children = milestones.childNodes;
-      // const array = [...children];
-      const array = Array.prototype.slice.call(milestones.childNodes, 0);
+      // const array = Array.prototype.slice.call(milestones.childNodes, 0);
+      const array = [...children];
 
       const eachElementId = array.map((element) => parseInt(element.id));
 
-      if (eachElementId.includes(id + i)) {
-        const nextDiv = array.find((node) => node.id - i == id);
+      if (id === 14) {
+        milestones.appendChild(item);
+        break;
+      } else if (eachElementId.includes(id + i)) {
+        const nextDiv = array.find((node) => node.id - i === id);
+
         milestones.insertBefore(
           item,
           milestones.childNodes[array.indexOf(nextDiv)]
         );
         break;
-      } else if (i !== 14 && !eachElementId.includes(id + i)) {
+      } else {
         continue;
-      } else if (i === 14 && !eachElementId.includes(id + i)) {
-        milestones.appendChild(item);
       }
     }
   }
