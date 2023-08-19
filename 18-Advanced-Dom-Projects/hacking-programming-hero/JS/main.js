@@ -92,55 +92,35 @@ function markMileStone(checkbox, id) {
     doneList.removeChild(item);
     milestones.appendChild(item);
 
-    console.log(typeof milestones.childNodes);
-    const arr = Array.prototype.slice.call(milestones.childNodes, 0);
-    const eachElementId = arr.map((element) => {
-      return parseInt(element.id);
-    });
-    console.log(eachElementId);
+    // console.log(typeof milestones.childNodes);
+    // console.log(eachElementId);
 
-    let sortedEachElementId = eachElementId.sort(function (a, b) {
-      return a - b;
-    });
+    // let sortedEachElementId = eachElementId.sort(function (a, b) {
+    //   return a - b;
+    // });
+    // console.log(sortedEachElementId);
+    // let length = sortedEachElementId.length;
 
-    console.log(sortedEachElementId);
-    let length = sortedEachElementId.length;
-    // console.log(milestonesData);
-    // console.log(typeof milestonesData);
-    // console.log(milestonesData[2]);
-    let copyMilestonesData = [...milestonesData];
-    // console.log(copyMilestonesData);
-    // console.log(typeof copyMilestonesData);
-    // console.log(copyMilestonesData[2]);
+    for (let i = 1; i <= milestonesData.length; i++) {
+      const children = milestones.childNodes;
+      // const array = [...children];
+      const array = Array.prototype.slice.call(milestones.childNodes, 0);
 
-    let k = 0;
-    for (let i = 0; i < length; i++) {
-      console.log(milestonesData[i]);
-      milestonesData[i] = copyMilestonesData[sortedEachElementId[k]];
-      console.log(copyMilestonesData[sortedEachElementId[k]]);
-      k++;
+      const eachElementId = array.map((element) => parseInt(element.id));
+
+      if (eachElementId.includes(id + i)) {
+        const nextDiv = array.find((node) => node.id - i == id);
+        milestones.insertBefore(
+          item,
+          milestones.childNodes[array.indexOf(nextDiv)]
+        );
+        break;
+      } else if (i !== 14 && !eachElementId.includes(id + i)) {
+        continue;
+      } else if (i === 14 && !eachElementId.includes(id + i)) {
+        milestones.appendChild(item);
+      }
     }
-
-    // const array = [...milestones.childNodes];
-
-    // for (let i = 1; i <= milestonesData.length; i++) {
-    //     const children = milestones.childNodes;
-    //     const array = [...children];
-    //     const eachElementId = array.map((element) => parseInt(element.id));
-
-    //     if (eachElementId.includes(no + i)) {
-    //         const nextDiv = array.find((node) => node.id - i == no);
-    //         milestones.insertBefore(
-    //             item,
-    //             milestones.childNodes[array.indexOf(nextDiv)]
-    //         );
-    //         break;
-    //     } else if (i !== 14 && !eachElementId.includes(no + i)) {
-    //         continue;
-    //     } else if (i === 14 && !eachElementId.includes(no + i)) {
-    //         milestones.appendChild(item);
-    //     }
-    // }
   }
 
   //   reload();
