@@ -66,4 +66,10 @@ function showmilestone(id) {
     details.innerText = milestonesData[id].description;
 }
 
+// liten for hero image load
+const milestoneImage = document.querySelector(".milestoneImage");
+milestoneImage.addEventListener("load", function () {
+    milestoneImage.style.opacity = 1;
+});
+
 loadMilestones();
