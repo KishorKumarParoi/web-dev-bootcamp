@@ -53,7 +53,14 @@ function openMilestone(milestoneElement, id) {
 
 function showmilestone(id) {
     const milestoneImage = document.querySelector(".milestoneImage");
+    const name = document.querySelector(".title");
+    const details = document.querySelector(".details");
+
+    // console.log(name, details);
+
     milestoneImage.src = milestonesData[id].image;
+    name.innerText = milestonesData[id].name;
+    details.innerText = milestonesData[id].description;
 }
 
 loadMilestones();
