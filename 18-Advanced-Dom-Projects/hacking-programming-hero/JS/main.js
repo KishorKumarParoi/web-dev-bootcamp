@@ -6,7 +6,8 @@ function loadMilestones() {
         .map(function (milestone) {
             return `<div class="milestone border-b" >
                     <div class="flex">
-                        <div class="checkbox"><input type="checkbox" /></div>
+                        <div class="checkbox"><input type="checkbox" onclick="markMileStone(this,${milestone._id
+                })" /></div>
                         <div onclick="openMilestone(this, ${milestone._id})">
                             <p>
                                 ${milestone.name}
@@ -71,5 +72,10 @@ const milestoneImage = document.querySelector(".milestoneImage");
 milestoneImage.addEventListener("load", function () {
     milestoneImage.style.opacity = 1;
 });
+
+function markMileStone() {
+    const checkbox = document.querySelector(".checkbox");
+
+}
 
 loadMilestones();
