@@ -92,12 +92,30 @@ function markMileStone(checkbox, id) {
         doneList.removeChild(item);
         milestones.appendChild(item);
 
-        // ? optimized approach
-        // const no = parseInt(item.id);
-        // console.log(item);
-        // console.log(item.id);
-        // console.log(item.classList);
-        // console.log(no);
+        console.log(typeof milestones.childNodes);
+        const arr = Array.prototype.slice.call(milestones.childNodes, 0);
+        const eachElementId = arr.map((element) => {
+            return parseInt(element.id);
+        });
+        console.log(eachElementId);
+
+        let sortedEachElementId = eachElementId.sort(function (a, b) {
+            return a - b;
+        });
+
+        console.log(sortedEachElementId);
+        let length = sortedEachElementId.length;
+        console.log(milestonesData);
+        console.log(typeof milestonesData);
+        console.log(milestonesData[2]);
+        let copyMilestonesData = [...milestonesData];
+        console.log(copyMilestonesData);
+        console.log(typeof copyMilestonesData);
+        console.log(copyMilestonesData[2]);
+
+        // for (let i = 1; i <= length; i++) {}
+
+        // const array = [...milestones.childNodes];
 
         // for (let i = 1; i <= milestonesData.length; i++) {
         //     const children = milestones.childNodes;
