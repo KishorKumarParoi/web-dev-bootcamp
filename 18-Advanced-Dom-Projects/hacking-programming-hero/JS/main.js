@@ -90,7 +90,8 @@ function markMileStone(checkbox, id) {
         doneList.appendChild(item);
     } else {
         doneList.removeChild(item);
-        milestones.appendChild(item);
+        const element = document.getElementById(id + 1);
+        milestones.insertBefore(item, element);
     }
 }
 
