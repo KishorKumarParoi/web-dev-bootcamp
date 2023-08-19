@@ -31,14 +31,11 @@ function loadMilestones() {
 function openMilestone(milestoneElement) {
     const currentPanel = milestoneElement.parentNode.nextElementSibling;
     const shownPanel = document.querySelector(".show");
-    // shownPanel.classList.add("show");
-
-    if (!currentPanel.classList.contains("show") && shownPanel) {
+    console.log(shownPanel);
+    if (shownPanel && !currentPanel.classList.contains("show")) {
         shownPanel.classList.remove("show");
-        currentPanel.classList.toggle("show");
     }
-    // console.log(shownPanel);
-    // console.log("currentPanel" + currentPanel);
+    currentPanel.classList.toggle("show");
 }
 
 loadMilestones();
