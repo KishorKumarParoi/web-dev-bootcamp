@@ -1,30 +1,32 @@
 const milestonesData = JSON.parse(data).data;
 
+// load course milestones data
 function loadMilestones() {
   const milestones = document.querySelector(".milestones");
+
   milestones.innerHTML = `${milestonesData
     .map(function (milestone) {
-      return `<div class="milestone border-b" id="${milestone._id}" >
-                    <div class="flex">
-                        <div class="checkbox"><input type="checkbox" onclick="markMileStone(this,${milestone._id
+      return `<div class="milestone border-b" id="${milestone._id}">
+      <div class="flex">
+        <div class="checkbox"><input type="checkbox" onclick="markMileStone(this, ${milestone._id
         })" /></div>
-                        <div onclick="openMilestone(this, ${milestone._id})">
-                            <p>
-                                ${milestone.name}
-                                <span><i class="fas fa-chevron-down"></i></span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="hidden_panel" id="${milestone._id}">
-                    ${milestone.modules
+        <div onclick="openMilestone(this, ${milestone._id})">
+          <p>
+            ${milestone.name}
+            <span><i class="fas fa-chevron-down"></i></span>
+          </p>
+        </div>
+      </div>
+      <div class="hidden_panel">
+        ${milestone.modules
           .map(function (module) {
             return `<div class="module border-b">
-                            <p>${module.name}</p>
-                        </div>`;
+            <p>${module.name}</p>
+          </div>`;
           })
-          .join("")} 
-                    </div>
-                </div>`;
+          .join("")}
+      </div>
+    </div>`;
     })
     .join("")}`;
 }
@@ -32,82 +34,76 @@ function loadMilestones() {
 function openMilestone(milestoneElement, id) {
   const currentPanel = milestoneElement.parentNode.nextElementSibling;
   const shownPanel = document.querySelector(".show");
-  // console.log(shownPanel);
-
-  // first remove previous active class
   const active = document.querySelector(".active");
-  if (active && !milestoneElement.classList.contains("active"))
+
+  // first remove previous active class if any [other than the clicked one]
+  if (active && !milestoneElement.classList.contains("active")) {
     active.classList.remove("active");
+  }
 
   // toggle current clicked one
   milestoneElement.classList.toggle("active");
 
-  // first hide previous panel if open other than clicked one
-  if (shownPanel && !currentPanel.classList.contains("show")) {
+  // first hide previous panel if open [other than the clicked element]
+  if (!currentPanel.classList.contains("show") && shownPanel)
     shownPanel.classList.remove("show");
-  }
 
   // toggle current element
   currentPanel.classList.toggle("show");
-  showmilestone(id);
+
+  showMilestone(id);
 }
 
-function showmilestone(id) {
+function showMilestone(id) {
   const milestoneImage = document.querySelector(".milestoneImage");
   const name = document.querySelector(".title");
   const details = document.querySelector(".details");
 
-  // console.log(name, details);
-
-  // opactity zero
-  milestoneImage.style.opacity = 0;
-
+  milestoneImage.style.opacity = "0";
   milestoneImage.src = milestonesData[id].image;
   name.innerText = milestonesData[id].name;
   details.innerText = milestonesData[id].description;
 }
 
-// liten for hero image load
+// listen for hero image load
 const milestoneImage = document.querySelector(".milestoneImage");
-milestoneImage.addEventListener("load", function () {
-  milestoneImage.style.opacity = 1;
-});
+milestoneImage.onload = function () {
+  this.style.opacity = "1";
+};
 
 function markMileStone(checkbox, id) {
-  // const checkBox = document.querySelector(".checkbox");
-  const item = document.getElementById(id);
   const doneList = document.querySelector(".doneList");
-  const milestones = document.querySelector(".milestones");
-
-  // console.log(checkbox);
-  // console.log(checkBox);
-  // console.log(item);
-  // console.log(doneList);
-  // console.log(milestones);
+  const milestonesList = document.querySelector(".milestones");
+  const item = document.getElementById(id);
 
   if (checkbox.checked) {
-    milestones.removeChild(item);
+    // mark as done
+    milestonesList.removeChild(item);
     doneList.appendChild(item);
   } else {
+    // back to main list
     doneList.removeChild(item);
-    // milestones.appendChild(item);
 
-    for (let i = 1; i <= milestonesData.length; i++) {
-      const children = milestones.childNodes;
-      // const array = Array.prototype.slice.call(milestones.childNodes, 0);
-      const array = [...children];
+    // task - do the sorting
+    // reload list
+    let length = milestonesData.length;
 
-      const eachElementId = array.map((element) => parseInt(element.id));
+    for (let i = 1; i <= length; i++) {
+      // const array = [...milestonesList.children];
+      const array = Array.prototype.slice.call(milestonesList.children, 0);
+      const elementId = array.map((element) => parseInt(element.id));
+      // console.log(array);
+      // console.log(elementId);
 
-      if (id === 14) {
-        milestones.appendChild(item);
+      if (id === length - 1) {
+        milestonesList.appendChild(item);
         break;
-      } else if (eachElementId.includes(id + i)) {
+      } else if (elementId.includes(id + i)) {
         const nextDiv = array.find((node) => node.id - i === id);
 
-        milestones.insertBefore(
+        milestonesList.insertBefore(
           item,
-          milestones.childNodes[array.indexOf(nextDiv)]
+          milestonesList.childNodes[array.indexOf(nextDiv)]
         );
         break;
       } else {
@@ -115,20 +111,6 @@ function markMileStone(checkbox, id) {
       }
     }
   }
-
-  //   reload();
-}
-
-function reload() {
-  const doneList = document.querySelector(".doneList");
-  const milestones = document.querySelector(".milestones");
-  // const doneListArray = Array.prototype.slice.call(doneList, 0);
-  const milestonesArray = Array.prototype.slice.call(milestones, 0);
-
-  console.log(doneList);
-  console.log(milestones);
-  // console.log(doneListArray);
-  // console.log(milestonesArray);
 }
 
 loadMilestones();
