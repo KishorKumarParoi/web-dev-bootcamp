@@ -91,21 +91,47 @@ function markMileStone(checkbox, id) {
     } else {
         doneList.removeChild(item);
         milestones.appendChild(item);
+
+        // ? optimized approach
+        // const no = parseInt(item.id);
+        // console.log(item);
+        // console.log(item.id);
+        // console.log(item.classList);
+        // console.log(no);
+
+        // for (let i = 1; i <= milestonesData.length; i++) {
+        //     const children = milestones.childNodes;
+        //     const array = [...children];
+        //     const eachElementId = array.map((element) => parseInt(element.id));
+
+        //     if (eachElementId.includes(no + i)) {
+        //         const nextDiv = array.find((node) => node.id - i == no);
+        //         milestones.insertBefore(
+        //             item,
+        //             milestones.childNodes[array.indexOf(nextDiv)]
+        //         );
+        //         break;
+        //     } else if (i !== 14 && !eachElementId.includes(no + i)) {
+        //         continue;
+        //     } else if (i === 14 && !eachElementId.includes(no + i)) {
+        //         milestones.appendChild(item);
+        //     }
+        // }
     }
 
-    reload();
+    //   reload();
 }
 
 function reload() {
-    const doneList = document.querySelector(".doneList").childNodes;
-    const milestones = document.querySelector(".milestones").childNodes;
-    const doneListArray = Array.prototype.slice.call(doneList, 0);
+    const doneList = document.querySelector(".doneList");
+    const milestones = document.querySelector(".milestones");
+    // const doneListArray = Array.prototype.slice.call(doneList, 0);
     const milestonesArray = Array.prototype.slice.call(milestones, 0);
 
     console.log(doneList);
-    console.log(doneListArray);
     console.log(milestones);
-    console.log(milestonesArray);
+    // console.log(doneListArray);
+    // console.log(milestonesArray);
 }
 
 loadMilestones();
