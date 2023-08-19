@@ -58,6 +58,9 @@ function showmilestone(id) {
 
     // console.log(name, details);
 
+    // opactity zero
+    milestoneImage.style.opacity = 0;
+
     milestoneImage.src = milestonesData[id].image;
     name.innerText = milestonesData[id].name;
     details.innerText = milestonesData[id].description;
