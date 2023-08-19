@@ -92,6 +92,20 @@ function markMileStone(checkbox, id) {
         doneList.removeChild(item);
         milestones.appendChild(item);
     }
+
+    reload();
+}
+
+function reload() {
+    const doneList = document.querySelector(".doneList").childNodes;
+    const milestones = document.querySelector(".milestones").childNodes;
+    const doneListArray = Array.prototype.slice.call(doneList, 0);
+    const milestonesArray = Array.prototype.slice.call(milestones, 0);
+
+    console.log(doneList);
+    console.log(doneListArray);
+    console.log(milestones);
+    console.log(milestonesArray);
 }
 
 loadMilestones();
