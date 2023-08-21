@@ -32,7 +32,7 @@
   margin: 20px 2%;
   padding: 20px;
   border: 2px solid black;
-  height: 500px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +70,8 @@
 input[type="text"] {
   padding: 5px;
   width: 30%;
+  font-size: 20px;
+  font-weight: 400;
 }
 input[type="checkbox"] {
   margin-right: 10px;
