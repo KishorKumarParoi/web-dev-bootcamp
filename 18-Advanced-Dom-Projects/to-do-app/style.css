@@ -52,7 +52,7 @@
 .completeList {
   width: 50%;
   height: 100%;
-  background-color: salmon;
+  background-color: lightcoral;
 }
 .todoList {
   width: 50%;
@@ -65,4 +65,17 @@
   padding-left: 3%;
   padding-top: 3%;
   line-height: 2;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.delete-item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 5px 15px;
 }
