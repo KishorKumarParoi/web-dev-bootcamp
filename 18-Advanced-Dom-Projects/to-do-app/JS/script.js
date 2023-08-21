@@ -8,7 +8,11 @@ let demo = document.getElementById("demo");
 // console.log(items);
 // console.log(completeItems);
 
-// console.log("hello world");
+document.getElementById("form").addEventListener("onsubmit", function (event) {
+    event.preventDefault();
+    // console.log("Form submitted");
+    // addNewTask();
+});
 
 // Add a new task
 let addNewTask = function () {
