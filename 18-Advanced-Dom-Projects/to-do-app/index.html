@@ -27,9 +27,23 @@
     <section class="container">
         <div class="todoList">
             <h1>To Do List</h1>
+            <ul id="items" style="list-style-type: none">
+                <li class="item">
+                    <input type="checkbox" /><label>Task Name</label>
+                </li>
+                <li class="item">
+                    <input type="checkbox" /><label>Task Name</label>
+                </li>
+                <li class="item">
+                    <input type="checkbox" /><label>Task Name</label>
+                </li>
+            </ul>
         </div>
-        <div class="completeList">
+        <div class="completeList" style="list-style-type: none">
             <h1>Completed Task List</h1>
+            <ul style="list-style-type: none">
+                <li class="item">Task Name <button class="delete">Delete</button></li>
+            </ul>
         </div>
     </section>
 </body>
