@@ -59,3 +59,10 @@
   height: 100%;
   background-color: cyan;
 }
+
+#items,
+#completed-items {
+  padding-left: 3%;
+  padding-top: 3%;
+  line-height: 2;
+}
