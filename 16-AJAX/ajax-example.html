@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax Example</title>
+</head>
+
+<body>
+    <h1>Ajax Example</h1>
+    <div>
+        <p id="demo"></p>
+        <button id="get">Get Data</button>
+        <button id="send">Send Data</button>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        let getButton = document.getElementById("get");
+        let sendButton = document.getElementById("send");
+
+        getButton.addEventListener("click", getData);
+        sendButton.addEventListener("click", sendData);
+
+        function getData() {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                console.log(this.responseText);
+            };
+
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+            xhr.send();
+        }
+
+        function sendData() { }
+    </script>
+</body>
+
+</html>
