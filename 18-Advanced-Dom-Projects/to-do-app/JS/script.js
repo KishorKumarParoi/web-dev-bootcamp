@@ -39,8 +39,8 @@ let completeTask = function () {
 
   // checkbox to be removed
   let checkBox = listItem.querySelector(`input[type='checkbox']`);
-  // listItem.removeChild(checkBox);
   checkBox.remove();
+  // listItem.removeChild(checkBox);
 
   completeItems.append(listItem);
 
