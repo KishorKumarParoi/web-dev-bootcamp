@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
 .header {
   margin: 20px auto;
   background-color: cyan;
@@ -32,7 +37,7 @@
   margin: 20px 2%;
   padding: 20px;
   border: 2px solid black;
-  height: 400px;
+  height: 10000px;
   display: flex;
   justify-content: center;
   align-items: center;
