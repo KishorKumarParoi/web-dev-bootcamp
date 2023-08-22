@@ -25,9 +25,44 @@ let addNewTask = function (event) {
   newTask.value = "";
 
   // bind the incomplete list to checkbox
+  bindInItems(listItem, completeTask);
+};
+
+let completeTask = function () {
+  let listItem = this.parentNode;
+  listItem.className = "del-item";
+
+  let deleteBtn = document.createElement("button");
+  deleteBtn.className = "btn-delete";
+  deleteBtn.innerText = "Delete";
+  listItem.appendChild(deleteBtn);
+
+  // checkbox to be removed
+  let checkBox = listItem.querySelector(`input[type='checkbox']`);
+  // listItem.removeChild(checkBox);
+  checkBox.remove();
+
+  completeItems.append(listItem);
+
+  // bind complete items
+  bindCompleteItems(listItem, deleteTask);
+};
+
+let deleteTask = function () {
+  let listitem = this.parentNode;
+  let ul = listitem.parentNode;
+
+  ul.removeChild(listitem);
 };
 
 let bindInItems = function (taskItem, checkboxClick) {
   let checkBox = taskItem.querySelector('input[type="checkbox"]');
   checkBox.onchange = checkboxClick;
 };
+
+let bindCompleteItems = function (taskItem, deleteButtonClick) {
+  let deleteButton = taskItem.querySelector(".btn-delete");
+  deleteButton.onclick = deleteButtonClick;
+};
+
+form.addEventListener("submit", addNewTask);

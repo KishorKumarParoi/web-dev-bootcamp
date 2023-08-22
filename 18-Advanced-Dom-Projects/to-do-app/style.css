@@ -77,9 +77,10 @@ input[type="checkbox"] {
   margin-right: 10px;
 }
 
-.delete-item {
+.del-item {
   display: flex;
   justify-content: space-around;
+  padding: 5px 0;
 }
 
 .btn {
@@ -97,8 +98,11 @@ input[type="checkbox"] {
   padding: 6px 18px;
   font-size: 16px;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   :hover {
     color: #fff;
     background-color: #0b5ed7;
@@ -120,8 +124,11 @@ input[type="checkbox"] {
   padding: 6px 18px;
   font-size: 16px;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   :hover {
     color: #fff;
     background-color: #0b5ed7;
