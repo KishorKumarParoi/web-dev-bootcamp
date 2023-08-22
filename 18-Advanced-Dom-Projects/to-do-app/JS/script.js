@@ -66,3 +66,11 @@ let bindCompleteItems = function (taskItem, deleteButtonClick) {
 };
 
 form.addEventListener("submit", addNewTask);
+
+for (let i = 0; i < items.children.length; i++) {
+  bindInItems(items.children[i], completeTask);
+}
+
+for (let i = 0; i < completeItems.children.length; i++) {
+  bindCompleteItems(completeItems.children[i], deleteTask);
+}
