@@ -28,6 +28,13 @@
                 let xhr = new XMLHttpRequest();
                 xhr.onload = function () {
                     // console.log(JSON.parse(this.responseText));
+                    // here application errors come
+
+                    if (this.status >= 400) {
+                        reject(
+                            `There is an Application error which status is ${this.status}`
+                        );
+                    }
                     resolve(this.response);
                 };
 
@@ -43,7 +50,7 @@
         function getData() {
             sendRequest(
                 "GET",
-                "https://jsonplaceholder.typiscode.com/posts/10/comments"
+                "https://jsonplaceholder.typicode.com/posts/10/comments"
             )
                 .then((response) => {
                     console.log(response);
@@ -56,7 +63,7 @@
         function sendData() {
             sendRequest(
                 "POST",
-                "https://jsonplaceholder.typicode.com/posts",
+                "https://jsonplaceholder.typicode.com/posts/test",
                 JSON.stringify({
                     firstName: "Kishor",
                     lastName: "Kumar",
