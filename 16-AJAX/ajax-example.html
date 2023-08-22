@@ -23,15 +23,24 @@
         getButton.addEventListener("click", getData);
         sendButton.addEventListener("click", sendData);
 
-        function getData() {
-            let xhr = new XMLHttpRequest();
-            xhr.onload = function () {
-                console.log(JSON.parse(this.responseText));
-            };
+        function sendRequest(method, url) {
+            return new Promise((resolve, reject) => {
+                let xhr = new XMLHttpRequest();
+                xhr.onload = function () {
+                    // console.log(JSON.parse(this.responseText));
+                    resolve(this.response);
+                };
 
-            xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
-            xhr.send();
+                xhr.onerror = function () {
+                    reject(this.error);
+                };
+
+                xhr.responseType = "json";
+                xhr.open(method, url, true);
+                xhr.send();
+            });
         }
+        function getData() { }
 
         function sendData() { }
     </script>
