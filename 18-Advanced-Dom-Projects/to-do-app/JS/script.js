@@ -4,32 +4,22 @@ let completeItems = document.getElementById("completed-items");
 let submit = document.getElementById("submit");
 let demo = document.getElementById("demo");
 
-// console.log(newTask);
-// console.log(items);
-// console.log(completeItems);
+let createNewTask = function (task) {
+  let listItem = document.createElement("li");
+  let checkBox = document.createElement("input");
+  let label = document.createElement("label");
 
-document.getElementById("form").addEventListener("onsubmit", function (event) {
-    event.preventDefault();
-    // console.log("Form submitted");
-    // addNewTask();
-});
+  checkBox.type = "checkbox";
+  label.innerText = task;
+  listItem.appendChild(checkBox);
+  listItem.appendChild(label);
 
-// Add a new task
-let addNewTask = function () {
-    // event.preventDefault();
-    let newTaskValue = newTask.value;
-    createNewTask(newTaskValue);
-    // demo.innerHTML = newTaskValue;
+  return listItem;
 };
 
-let createNewTask = function (task) {
-    let listItem = document.createElement("li");
-    let checkBox = document.createElement("input");
-    let label = document.createElement("label");
-
-    checkBox.type = "checkbox";
-    label.innerText = task;
-    listItem.appendChild(checkBox);
-    listItem.appendChild(label);
-    items.appendChild(listItem);
+// Add a new task
+let addNewTask = function (event) {
+  event.preventDefault();
+  let listItem = createNewTask(newTask.value);
+  items.appendChild(listItem);
 };
