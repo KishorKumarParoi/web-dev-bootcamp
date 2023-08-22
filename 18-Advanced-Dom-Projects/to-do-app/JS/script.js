@@ -22,4 +22,12 @@ let addNewTask = function (event) {
   event.preventDefault();
   let listItem = createNewTask(newTask.value);
   items.appendChild(listItem);
+  newTask.value = "";
+
+  // bind the incomplete list to checkbox
+};
+
+let bindInItems = function (taskItem, checkboxClick) {
+  let checkBox = taskItem.querySelector('input[type="checkbox"]');
+  checkBox.onchange = checkboxClick;
 };
