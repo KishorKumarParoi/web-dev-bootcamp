@@ -63,7 +63,7 @@
         function sendData() {
             sendRequest(
                 "POST",
-                "https://jsonplaceholder.typicode.com/posts/test",
+                "https://jsonplaceholder.typicode.com/posts/",
                 JSON.stringify({
                     firstName: "Kishor",
                     lastName: "Kumar",
@@ -75,6 +75,9 @@
                 })
                 .catch((err) => {
                     console.log(err);
+                })
+                .finally(() => {
+                    console.log("this programms ran successfully");
                 });
         }
     </script>
