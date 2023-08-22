@@ -32,7 +32,7 @@
                 };
 
                 xhr.onerror = function () {
-                    reject(this.error);
+                    reject(new Error("Error happend in url"));
                 };
 
                 xhr.responseType = "json";
@@ -43,8 +43,14 @@
         function getData() {
             sendRequest(
                 "GET",
-                "https://jsonplaceholder.typicode.com/posts/1/comments"
-            );
+                "https://jsonplaceholder.typicode.com/posts/10/comments"
+            )
+                .then((response) => {
+                    console.log(response);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
         }
 
         function sendData() { }
