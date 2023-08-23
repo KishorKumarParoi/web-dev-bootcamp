@@ -51,7 +51,7 @@ console.log(myArr[0]);
 const Kishor = {
   name: "Kishor",
   age: 25,
-  cars: ["Ford", "BMW", "Fiat"],
+  cars: ["Ford", "BM  W", "Fiat"],
   text: txt,
 };
 
