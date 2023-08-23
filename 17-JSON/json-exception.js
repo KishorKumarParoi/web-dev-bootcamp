@@ -22,5 +22,18 @@ const reviver = JSON.parse(parsed, (key, value) => {
 });
 
 console.log(reviver);
+reviver.func = function () {
+  console.log("Hello");
+};
+
+console.log(reviver);
+reviver.func();
+
+reviver.func.toString();
+console.log(reviver);
+const rev = JSON.stringify(reviver);
+console.log(rev);
+
+
 
 debugger;
