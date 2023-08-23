@@ -12,4 +12,8 @@ console.log(obj);
 const parsed = JSON.stringify(obj);
 console.log(parsed);
 
+const newObj = JSON.parse(parsed);
+console.log(newObj);
+console.log(new Date(newObj.date));
+
 debugger;
