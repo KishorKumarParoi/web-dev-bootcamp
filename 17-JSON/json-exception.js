@@ -16,7 +16,7 @@ const newObj = JSON.parse(parsed);
 console.log(newObj);
 console.log(new Date(newObj.date));
 
-const reviver = JSON.parse(parsed, (key, value) => {
+let reviver = JSON.parse(parsed, (key, value) => {
   if (key === "birth") return new Date(value);
   return value;
 });
@@ -29,11 +29,18 @@ reviver.func = function () {
 console.log(reviver);
 reviver.func();
 
-reviver.func.toString();
+reviver.func = reviver.func.toString();
 console.log(reviver);
 const rev = JSON.stringify(reviver);
 console.log(rev);
 
+const txt =
+  '{"name":"John", "age":"function () {return 30;}", "city":"New York"}';
 
+console.log(txt);
+console.log(typeof txt);
+console.log(JSON.parse(txt));
+obj.age = eval("(" + obj.age + ")");
+console.log(obj.age);
 
 debugger;
