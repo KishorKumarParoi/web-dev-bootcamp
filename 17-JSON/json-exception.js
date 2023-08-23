@@ -16,4 +16,11 @@ const newObj = JSON.parse(parsed);
 console.log(newObj);
 console.log(new Date(newObj.date));
 
+const reviver = JSON.parse(parsed, (key, value) => {
+  if (key === "birth") return new Date(value);
+  return value;
+});
+
+console.log(reviver);
+
 debugger;
