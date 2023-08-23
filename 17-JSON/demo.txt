@@ -1,0 +1,1 @@
+{"name":"John", "age":30, "car":["Ford", "BMW", "Fiat"], "func":function () {console.log("Hello");}}
