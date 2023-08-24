@@ -15,7 +15,8 @@
 
     <script>
         async function change_myselect(sel) {
-            let x = "", text = "";
+            let x = "",
+                text = "";
             const dbParam = JSON.stringify({ table: sel, limit: 20 });
             const response = await fetch("json_demo_html_table.php", {
                 method: "POST",
@@ -26,14 +27,13 @@
             });
             const myObj = await response.json();
 
-            text = "<table border='1'>"
+            text = "<table border='1'>";
             for (x in myObj) {
                 text += "<tr><td>" + myObj[x].name + "</td></tr>";
             }
-            text += "</table>"
+            text += "</table>";
             document.getElementById("demo").innerHTML = text;
         }
-      }
     </script>
 </body>
 
