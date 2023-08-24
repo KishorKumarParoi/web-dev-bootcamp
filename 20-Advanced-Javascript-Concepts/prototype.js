@@ -12,18 +12,21 @@
 //   },
 // };
 
+const permanentMethods = {
+  eat() {
+    console.log("Person is eating");
+  },
+  sleep() {
+    console.log("Person is sleeping");
+  },
+};
+
 function Person(name, age) {
   const person = {};
   person.age = age;
   person.name = name;
-
-  person.eat = function () {
-    console.log("Person is eating");
-  };
-
-  person.sleep = function () {
-    console.log("Person is sleeping");
-  };
+  person.eat = permanentMethods.eat;
+  person.sleep = permanentMethods.sleep;
   return person;
 }
 
