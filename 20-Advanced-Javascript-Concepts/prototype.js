@@ -22,12 +22,12 @@
 // };
 
 function Person(name, age) {
-  const person = Object.create(Person.prototype);
-  person.age = age;
-  person.name = name;
+  //   const person = Object.create(Person.prototype);   automatic
+  this.age = age;
+  this.name = name;
   //   person.eat = permanentMethods.eat;
   //   person.sleep = permanentMethods.sleep;
-  return person;
+  //   return person;  automatic
 }
 
 Person.prototype = {
@@ -39,11 +39,16 @@ Person.prototype = {
   },
 };
 
-const Kishor = Person("Kishor", 24);
-const JoeRogan = Person("Joe Rogan", 54);
+Person.prototype.play = () => {
+  console.log("Person is playing");
+};
+
+const Kishor = new Person("Kishor", 24);
+const JoeRogan = new Person("Joe Rogan", 54);
 
 console.log(Kishor.name);
 JoeRogan.sleep();
+Kishor.play();
 console.log(JoeRogan);
 
 const captain = {
@@ -55,6 +60,7 @@ const captain = {
 };
 
 const tonyStark = Object.create(captain);
+// const tonyStark = new captain();
 console.log(tonyStark.power);
 
 debugger;
