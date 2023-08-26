@@ -36,5 +36,13 @@ timer(); // Output: Time elapsed: 1000ms
 console.log(timer);
 
 timer = null;
-timer();
+// timer();
+
+for (let i = 0; i < 3; i++) {
+  const myfunc = () => {
+    console.log(i);
+  };
+  setTimeout(myfunc, 3000);
+}
+
 debugger;
