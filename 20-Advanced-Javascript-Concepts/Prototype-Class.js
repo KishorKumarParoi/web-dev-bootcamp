@@ -8,12 +8,12 @@ function Cricketer(type, country) {
   this.country = country;
 }
 
-Person.prototype.eat = function () {
+Person.prototype.eat = (name) => {
   console.log(`${this.name} is eating`);
 };
 
 Cricketer.prototype = {
-  play: function () {
+  play: function (type) {
     console.log(`${this.type} is playing`);
   },
 };
@@ -29,7 +29,7 @@ sakib.play();
 
 const tamim = new Person("Tamim", 32);
 console.log(tamim);
-tamim.eat();
 tamim.kishor();
+tamim.eat();
 
 debugger;
