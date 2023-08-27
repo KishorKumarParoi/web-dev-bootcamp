@@ -78,6 +78,10 @@ class CricketerNew extends PersonNew {
   playerCountry() {
     console.log(`${this.name} is from ${this.country}`);
   }
+
+  static isEqualAge(cricketer1, cricketer2) {
+    return cricketer1.age === cricketer2.age;
+  }
 }
 
 CricketerNew.prototype.sleep = function () {
@@ -96,4 +100,5 @@ Shanto.playerCountry();
 const Soumya = new PersonNew("Soumya", 28);
 console.log(Soumya);
 
+console.log(CricketerNew.isEqualAge(Shanto, Soumya));
 debugger;
