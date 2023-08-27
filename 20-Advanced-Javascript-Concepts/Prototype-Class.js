@@ -80,6 +80,7 @@ class CricketerNew extends PersonNew {
   }
 
   static isEqualAge(cricketer1, cricketer2) {
+    console.log(this.name);
     return cricketer1.age === cricketer2.age;
   }
 }
