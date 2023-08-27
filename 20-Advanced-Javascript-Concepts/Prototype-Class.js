@@ -75,6 +75,7 @@ class CricketerNew extends PersonNew {
     console.log(`${this.name} is playing`);
   }
   eat() {
+    super.eat();
     console.log(`${this.name} is eating Laddu`);
   }
 
