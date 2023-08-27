@@ -78,7 +78,7 @@ console.log(Shanto.father.grandfather.age);
 
 // explicit binding
 
-function printName(v1, v2, v3) {
+function printName() {
   console.log(
     `${this.name} is ${this.age} years old and he is ${v1}, ${v2}, ${v3}`
   );
@@ -93,6 +93,12 @@ let Soumya = {
   age: 28,
 };
 
+let Mithun = {
+  name: "Mithun",
+  age: 30,
+};
+
 printName.call(Soumya, v1, v2, v3);
+printName.apply(Mithun, [v1, v2, v3]);
 
 debugger;
