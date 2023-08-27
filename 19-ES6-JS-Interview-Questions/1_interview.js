@@ -9,3 +9,8 @@ console.log(newArr);
 let x = "Kishor";
 console.log(Boolean(x));
 console.log(!!x);
+
+// resizing an array
+newArr.length = 5;
+console.dir(newArr);
+debugger;
