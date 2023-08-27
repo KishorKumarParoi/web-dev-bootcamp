@@ -104,4 +104,18 @@ printName.apply(Mithun, [v1, v2, v3]);
 let instance = printName.bind(Soumya, v1, v2, v3);
 instance();
 
+function Persona(name, age) {
+  // let this = object.create(null);
+  this.name = name;
+  this.age = age;
+  this.printName = function () {
+    console.log(`${this.name} is ${this.age} years old`);
+  };
+  // return this;
+}
+
+const kkp = new Persona("KKP", 24);
+console.log(kkp);
+kkp.printName();
+
 debugger;
