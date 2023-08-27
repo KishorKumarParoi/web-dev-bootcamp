@@ -78,7 +78,7 @@ console.log(Shanto.father.grandfather.age);
 
 // explicit binding
 
-function printName() {
+function printName(...v1) {
   console.log(
     `${this.name} is ${this.age} years old and he is ${v1}, ${v2}, ${v3}`
   );
