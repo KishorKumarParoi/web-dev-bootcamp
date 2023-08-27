@@ -101,4 +101,7 @@ let Mithun = {
 printName.call(Soumya, v1, v2, v3);
 printName.apply(Mithun, [v1, v2, v3]);
 
+let instance = printName.bind(Soumya, v1, v2, v3);
+instance();
+
 debugger;
