@@ -61,9 +61,22 @@ class CricketerNew extends PersonNew {
     this.type = type;
     this.country = country;
   }
+  // getter is a tools which helps us to call like property
+
+  get _getCountry() {
+    return this.country;
+  }
+
+  set _getCountry(country) {
+    this.country = country;
+  }
 
   play() {
     console.log(`${this.name} is playing`);
+  }
+
+  playerCountry() {
+    console.log(`${this.name} is from ${this.country}`);
   }
 }
 
@@ -74,6 +87,11 @@ CricketerNew.prototype.sleep = function () {
 const Shanto = new CricketerNew("Shanto", 32, "Batsman", "Bangladesh");
 console.log(Shanto);
 Shanto.sleep();
+console.log(Shanto._getCountry);
+console.log((Shanto._getCountry = "India"));
+console.log((Shanto._getCountry = "Uganda"));
+
+Shanto.playerCountry();
 
 const Soumya = new PersonNew("Soumya", 28);
 console.log(Soumya);
