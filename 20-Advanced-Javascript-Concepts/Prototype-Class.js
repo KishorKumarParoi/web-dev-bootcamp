@@ -74,6 +74,9 @@ class CricketerNew extends PersonNew {
   play() {
     console.log(`${this.name} is playing`);
   }
+  eat() {
+    console.log(`${this.name} is eating Laddu`);
+  }
 
   playerCountry() {
     console.log(`${this.name} is from ${this.country}`);
@@ -95,8 +98,9 @@ Shanto.sleep();
 console.log(Shanto._getCountry);
 console.log((Shanto._getCountry = "India"));
 console.log((Shanto._getCountry = "Uganda"));
-
 Shanto.playerCountry();
+
+Shanto.eat();
 
 const Soumya = new PersonNew("Soumya", 28);
 console.log(Soumya);
