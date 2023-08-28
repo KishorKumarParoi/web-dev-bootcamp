@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copy</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Let's Copy below text</h1>
+        <h2 id="text">learnwithkkp.com</h2>
+        <button id="copy" onclick="textElement()">Copy</button>
+    </div>
+
+    <script>
+        function textElement() {
+            let text = document.getElementById("text");
+            console.log(text.innerText);
+
+            copyToClipboard(text.innerText);
+        }
+
+        function copyToClipboard(str) {
+            let element = document.createElement("textarea");
+            element.value = str;
+            document.querySelector(".container").appendChild(element);
+            element.select();
+            document.execCommand("copy");
+            document.execCommand("bold");
+            document.querySelector(".container").removeChild(element);
+        }
+    </script>
+</body>
+
+</html>
