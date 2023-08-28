@@ -25,4 +25,8 @@ let captain = "Mashrafi";
 captain === "Mashrafi" && console.log("Captain is Mashrafi");
 captain === "Mashrafi" || console.log("Captain is not Mashrafi");
 
+// replace all occurances of a string
+let str = "Kishor is a dreamer and Kishor is a firm believer";
+console.log(str.replace(/kishor/gi, "KKP"));
+
 debugger;
