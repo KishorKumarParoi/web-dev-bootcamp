@@ -5,4 +5,7 @@ let a = 10;
 a = (a, --a);
 console.log(a);
 
+let y = (100, 299);
+console.log(y);
+
 debugger;
