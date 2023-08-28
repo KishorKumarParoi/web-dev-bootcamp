@@ -8,4 +8,15 @@ console.log(a);
 let y = (100, 299);
 console.log(y);
 
+let arr = [
+  [1, 2, 3, 4],
+  [1, 2, 3],
+  [1, 2],
+  [1, 2],
+];
+
+for (let i = 0, j = 3; i < arr.length; i++, j--) {
+  console.log(`arr[${i}][${j}] =  ${arr[i][j]}`);
+}
+
 debugger;
