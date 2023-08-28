@@ -11,3 +11,12 @@ console.log(arr);
 
 [arr[2], arr[5]] = [arr[5], arr[2]];
 console.log(arr);
+
+let a = 10;
+let b = 100;
+
+[a, b] = [b, a];
+console.log(a, b);
+
+a = b + (b = a) - b;
+console.log(a, b);
