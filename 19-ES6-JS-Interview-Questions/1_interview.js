@@ -35,4 +35,16 @@ const lang2 = "Python";
 console.log({ lang1 });
 console.log({ lang2 });
 
+// timing of a function
+
+let startTime = performance.now();
+
+for (let i = 0; i < 100000000; i++) {
+//   console.log(i);
+}
+
+let endTime = performance.now();
+
+console.log(`Time Elapsed: ${(endTime - startTime) / 1000} seconds.`);
+
 debugger;
