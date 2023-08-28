@@ -6,3 +6,8 @@ arr[3] = arr[5];
 arr[5] = temp;
 
 console.log(arr);
+
+// swap variables using destructuring
+
+[arr[2], arr[5]] = [arr[5], arr[2]];
+console.log(arr);
