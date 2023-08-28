@@ -19,6 +19,10 @@ let arr1 = [1, 2, 3, [4, [5, 6], [7, [8], 9]]];
 console.log(arr1.flat(Infinity));
 
 // shortform
+// let Kishor = "Dreamer and Firm Believer";
+let captain = "Mashrafi";
 
+captain === "Mashrafi" && console.log("Captain is Mashrafi");
+captain === "Mashrafi" || console.log("Captain is not Mashrafi");
 
 debugger;
