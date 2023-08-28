@@ -34,3 +34,9 @@ const obj = {
 
 const { name: Name, age: Boyos } = obj;
 console.log(Name, Boyos);
+
+const { address: thikana } = obj;
+console.log(thikana);
+console.log(typeof thikana);
+
+debugger;
