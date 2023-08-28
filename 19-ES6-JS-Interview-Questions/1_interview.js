@@ -13,4 +13,12 @@ console.log(!!x);
 // resizing an array
 newArr.length = 5;
 console.dir(newArr);
+
+// flatten an array
+let arr1 = [1, 2, 3, [4, [5, 6], [7, [8], 9]]];
+console.log(arr1.flat(Infinity));
+
+// shortform
+
+
 debugger;
