@@ -29,4 +29,10 @@ captain === "Mashrafi" || console.log("Captain is not Mashrafi");
 let str = "Kishor is a dreamer and Kishor is a firm believer";
 console.log(str.replace(/kishor/gi, "KKP"));
 
+const lang1 = "JavaScript";
+const lang2 = "Python";
+
+console.log({ lang1 });
+console.log({ lang2 });
+
 debugger;
