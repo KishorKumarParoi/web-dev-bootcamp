@@ -20,3 +20,17 @@ console.log(a, b);
 
 a = b + (b = a) - b;
 console.log(a, b);
+
+// Destructuring aliases
+
+const obj = {
+  name: "Kishor",
+  age: 25,
+  address: {
+    city: "Dhaka",
+    country: "Bangladesh",
+  },
+};
+
+const { name: Name, age: Boyos } = obj;
+console.log(Name, Boyos);
