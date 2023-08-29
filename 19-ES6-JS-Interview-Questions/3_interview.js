@@ -1,0 +1,11 @@
+console.log(typeof ([] + []));
+console.log(String([] + []));
+console.log(typeof ({} + []));
+console.log(String({} + []));
+console.log(true / 5 + "5" * true);
+console.log(true / 5 + "5");
+console.log(true + "5");
+console.log(true + 5 + "5");
+console.log(true + 5 + "5" + true);
+console.log(true / 5 + "5" * true - 5);
+debugger;
