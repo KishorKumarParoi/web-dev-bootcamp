@@ -1,3 +1,5 @@
+const { doc } = require("prettier");
+
 console.log(typeof ([] + []));
 console.log(String([] + []));
 console.log(typeof ({} + []));
@@ -21,8 +23,7 @@ console.log(str);
 
 function customTag(strings, ...values) {
   console.log(strings); // Array of string literals
-    console.log(values); // Array of substituted values
-    
+  console.log(values); // Array of substituted values
 }
 
 const text = "world";
@@ -31,5 +32,7 @@ const txt3 = "world3";
 const txt4 = "world4";
 
 customTag`Hello ${text} ${txt2} ${txt3} ${txt4} !`;
+
+// document.body.contentEditable = true;
 
 debugger;
