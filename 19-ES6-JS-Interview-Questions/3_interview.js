@@ -58,4 +58,6 @@ console.log(typeof aa[aa](1120));
 console.log(aa[aa][aa](1120));
 console.log(typeof aa[aa][aa][aa](1120));
 
+console.log((0.1 * 10 + 0.2 * 10) / 10);
+
 debugger;
