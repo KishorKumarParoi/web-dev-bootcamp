@@ -25,8 +25,12 @@ const myFunc = function () {
   console.log(arguments);
   console.log(arguments.length);
   console.log(arguments[0]);
+
+  //   console.log([...arguments].sort((a, b) => a - b));
+  //   return Array.prototype.slice.call(arguments).sort((a, b) => a - b);
+  return Array.from(arguments).sort((a, b) => a - b);
 };
 
-myFunc(2, 1, 4, 5);
+console.log(myFunc(2, 1, 4, 5));
 
 debugger;
