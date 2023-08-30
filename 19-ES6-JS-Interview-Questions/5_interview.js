@@ -49,4 +49,17 @@ function reverseWords(str) {
 
 console.log(reverseWords(str));
 
+// sorting words by length in a sentence by asc order
+
+str = "Javascript is a Programming language";
+
+function sortByAsc(str) {
+  return str
+    .split(" ")
+    .sort((a, b) => a.length - b.length)
+    .join(" ");
+}
+
+console.log(sortByAsc(str));
+
 debugger;
