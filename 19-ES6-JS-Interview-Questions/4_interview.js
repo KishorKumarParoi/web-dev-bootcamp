@@ -20,4 +20,13 @@ function sortArguments(...args) {
 
 sortArguments(5, 3, 7, 1); // [1, 3, 5, 7]
 
+const myFunc = function () {
+  //   arguments;
+  console.log(arguments);
+  console.log(arguments.length);
+  console.log(arguments[0]);
+};
+
+myFunc(2, 1, 4, 5);
+
 debugger;
