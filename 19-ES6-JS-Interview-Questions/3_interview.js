@@ -42,10 +42,16 @@ function b() {
 let a = {
   length: 10,
   method: function (a) {
-    arguments[0]();   // this is arguments
+    arguments[0](); // this is arguments
   },
 };
 
 a.method(b, 1, 100);
+
+let aa = new String("constructor");
+console.log(aa);
+console.log(aa.constructor);
+console.log(aa[aa][aa]);
+console.log(aa[aa][aa][aa]);
 
 debugger;
