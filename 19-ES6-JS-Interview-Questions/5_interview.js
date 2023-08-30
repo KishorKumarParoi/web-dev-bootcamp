@@ -26,6 +26,11 @@ function countMap(data) {
     // }
   });
 
+  output = {};
+  //   console.log(output);
+
+  data.forEach((ele) => (output[ele] = (output[ele] || 0) + 1));
+
   return output;
 }
 
