@@ -35,4 +35,17 @@ customTag`Hello ${text} ${txt2} ${txt3} ${txt4} !`;
 
 // document.body.contentEditable = true;
 
+function b() {
+  console.log(`the length is ${this.length}`);
+}
+
+let a = {
+  length: 10,
+  method: function (a) {
+    arguments[0]();   // this is arguments
+  },
+};
+
+a.method(b, 1, 100);
+
 debugger;
