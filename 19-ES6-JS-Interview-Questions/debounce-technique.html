@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debouncing Tutorial by Learn with Sumit - LWS</title>
+
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            outline: none;
+            border: 0px;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+        }
+
+        button:active {
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="button">Click Here</button>
+    </div>
+
+    <script src="./debounce-technique.js"></script>
+</body>
+
+</html>
