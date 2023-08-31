@@ -6,9 +6,9 @@ const user = {
   years: 30,
 };
 
-const { name, years: age, isAdmin = false } = user;
+const { name: Name, years: age, isAdmin = false } = user;
 
-console.log(name); // John
+console.log(Name); // John
 
 console.log(age); // 30
 
