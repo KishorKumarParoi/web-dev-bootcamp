@@ -14,3 +14,17 @@ console.log(user.name);
 console.log(user.years);
 console.log(Name);
 console.log(age);
+
+// 4. What is the output?
+let salaries = {
+    John: 100,
+    Pete: 300,
+    Mary: 250,
+},
+    sum = 0;
+
+for (let salary of Object.values(salaries)) {
+    sum += salary;
+}
+
+console.log(sum);
