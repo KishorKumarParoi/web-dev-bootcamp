@@ -43,4 +43,19 @@ let discount3 = discount(600, 0.3); // imperative
 
 console.log(discount1);
 
+// declaritive version of discount
+
+function discountCurried(discount) {
+  return function (price) {
+    return price - price * discount;
+  };
+}
+
+let tenPercentDiscount = discountCurried(0.1);
+let product1 = tenPercentDiscount(600);
+let product2 = tenPercentDiscount(1000);
+
+console.log(product1);
+console.log(product2);
+
 debugger;
