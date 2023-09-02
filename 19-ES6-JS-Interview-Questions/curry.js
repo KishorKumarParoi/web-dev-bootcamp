@@ -18,3 +18,8 @@ let step3 = 6 * step2(30);
 
 // console.log(multiply(10, 20, 30));
 console.log(step3);
+console.dir(step1);
+console.dir(step2);
+console.dir(step3);
+
+debugger;
