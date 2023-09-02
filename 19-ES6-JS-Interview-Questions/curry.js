@@ -22,4 +22,25 @@ console.dir(step1);
 console.dir(step2);
 console.dir(step3);
 
+function discount(price, discount) {
+  return price - price * discount;
+}
+
+let discount1 = discount(600, 0.1); // imperative
+let discount2 = discount(600, 0.2); // imperative
+let discount3 = discount(600, 0.3); // imperative
+
+// redundant means repetitive or unnecessary code
+// currying is a way to remove redundant code
+
+// declaritive and imperative programming
+// declaritive is like sql
+// imperative is like javascript
+
+// currying is a way to make a function more declaritive
+// declaritive is what only
+// imperative is how and what combined
+
+console.log(discount1);
+
 debugger;
