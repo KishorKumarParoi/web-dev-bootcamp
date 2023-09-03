@@ -1,5 +1,7 @@
 // converting multiple parameters to a single parameter
 
+const { conforms } = require("lodash");
+
 function multiply(a, b, c) {
   return a * b * c;
 }
@@ -54,8 +56,11 @@ function discountCurried(discount) {
 let tenPercentDiscount = discountCurried(0.1);
 let product1 = tenPercentDiscount(600);
 let product2 = tenPercentDiscount(1000);
-
 console.log(product1);
 console.log(product2);
+
+let thirtyPercentDiscount = discountCurried(0.3);
+let product3 = thirtyPercentDiscount(6000);
+console.log(product3);
 
 debugger;
