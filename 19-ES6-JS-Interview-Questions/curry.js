@@ -67,7 +67,9 @@ console.log(product3);
 
 function curry(func) {
   return function curried(...args) {
+    // console.log(this);
     if (args.length >= func.length) {
+      //   console.log(this);
       return func.apply(this, args);
     } else {
       return function (...args2) {
