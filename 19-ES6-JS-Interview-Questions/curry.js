@@ -63,4 +63,19 @@ let thirtyPercentDiscount = discountCurried(0.3);
 let product3 = thirtyPercentDiscount(6000);
 console.log(product3);
 
+// curry converter
+
+function curry(func) {}
+
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+let curriedSum = curry(sum);
+console.log(curriedSum);
+
+console.log(curriedSum(1)(2, 3));
+console.log(curriedSum(1)(2)(3));
+console.log(curriedSum(1, 2)(3));
+
 debugger;
