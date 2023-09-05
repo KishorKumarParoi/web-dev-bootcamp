@@ -40,4 +40,14 @@ console.dir(curryConverter(10)(20, 30));
 console.dir(curryConverter(10)(20)(30));
 console.dir(curryConverter(10)(20)(30)(40)(50)(60));
 
+function product(discount) {
+  return function (price) {
+    return price - price * discount;
+  };
+}
+
+let twentyPercentDiscount = product(0.2);
+let prod1 = twentyPercentDiscount(1000);
+console.log(prod1);
+
 debugger;
