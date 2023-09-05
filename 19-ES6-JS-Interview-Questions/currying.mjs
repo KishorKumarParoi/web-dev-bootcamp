@@ -1,6 +1,6 @@
 // Currying is a technique of evaluating function with multiple arguments, into sequence of functions with single argument.
 
-import _ from "lodash";
+// import _ from "lodash";
 
 function multiply(a) {
   return function (b) {
@@ -30,11 +30,25 @@ console.log(step3);
 //   };
 // }
 
+// ES6 Syntax Curry Converter
+
+function curry(fn) {
+  return function curried(...args) {
+    if (fn.length <= args.length) {
+      return fn.apply(this, args);
+    } else {
+      return function (...args2) {
+        return curried.apply(this, args2.concat(args));
+      };
+    }
+  };
+}
+
 function sum(a, b, c, d, e, f) {
   return a + b + c + d + e + f;
 }
 
-let curryConverter = _.curry(sum);
+let curryConverter = curry(sum);
 
 console.dir(curryConverter(10, 20, 30));
 console.dir(curryConverter(10)(20, 30));
