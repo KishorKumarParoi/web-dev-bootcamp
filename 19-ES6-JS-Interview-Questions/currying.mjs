@@ -38,7 +38,7 @@ function curry(fn) {
       return fn.apply(this, args);
     } else {
       return function (...args2) {
-        return curried.apply(this, args2.concat(args));
+        return curried.apply(this, [...args, ...args2]);
       };
     }
   };
@@ -53,7 +53,7 @@ let curryConverter = curry(sum);
 console.dir(curryConverter(10, 20, 30));
 console.dir(curryConverter(10)(20, 30));
 console.dir(curryConverter(10)(20)(30));
-console.dir(curryConverter(10)(20)(30)(40)(50)(60));
+// console.dir(curryConverter(10)(20)(30)(40)(50)(60));
 
 function product(discount) {
   return function (price) {
