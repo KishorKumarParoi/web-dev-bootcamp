@@ -65,4 +65,22 @@ let twentyPercentDiscount = product(0.2);
 let prod1 = twentyPercentDiscount(1000);
 console.log(prod1);
 
+function cury(f, ...args) {
+  console.log(args);
+  return (...newArgs) => {
+    const allArgs = [...args, ...newArgs];
+    if (allArgs.length >= f.length) {
+      return f(...allArgs);
+    } else {
+      return cury(f, ...allArgs);
+    }
+  };
+ a,e
+function fun(a, b, c) {
+  return a * b + c;
+}
+
+const k = cury(fun);
+console.log(k(10, 20, 30));
+
 debugger;
