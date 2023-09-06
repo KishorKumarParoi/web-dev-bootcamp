@@ -15,11 +15,21 @@
         p {
             display: inline;
         }
+
+        button {
+            padding: 20px;
+            width: 150px;
+            margin-left: 20px;
+            font-size: 20px;
+            border-radius: 20px;
+            background-color: orange;
+        }
     </style>
 </head>
 
 <body>
     <input type="text" name="Name" id="Name" size="50" />
+    <button type="submit" id="btn">Submit</button>
     <br />
     <h1>
         Default :
@@ -40,12 +50,33 @@
         let debounceText = document.getElementById("debounce");
         let throttleText = document.getElementById("throttle");
         let inputText = document.getElementById("Name");
+        let button = document.getElementById("btn");
 
         inputText.addEventListener("keyup", (e) => {
             defaultText.textContent = e.target.value;
             // console.log("Default : ", e.target.value);
-            debounceText.textContent = e.target.value;
         });
+
+        // Debounce
+        function debounce(fn, delay) {
+            let timeOutId;
+
+            return function () {
+                clearTimeout(timeOutId);
+                timeOutId = setTimeout(() => {
+                    fn();
+                    debounceText.textContent = inputText.value;
+                    console.log("Debounce : ", inputText.value);
+                }, delay);
+            };
+        }
+
+        button.addEventListener(
+            "click",
+            debounce(function () {
+                console.log(inputText.value);
+            }, 3000)
+        );
     </script>
 </body>
 
