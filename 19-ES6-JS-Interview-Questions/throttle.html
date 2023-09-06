@@ -34,7 +34,19 @@
         Throttle:
         <p id="throttle"></p>
     </h1>
-    <script></script>
+
+    <script>
+        let defaultText = document.getElementById("default");
+        let debounceText = document.getElementById("debounce");
+        let throttleText = document.getElementById("throttle");
+        let inputText = document.getElementById("Name");
+
+        inputText.addEventListener("keyup", (e) => {
+            defaultText.textContent = e.target.value;
+            // console.log("Default : ", e.target.value);
+            debounceText.textContent = e.target.value;
+        });
+    </script>
 </body>
 
 </html>
