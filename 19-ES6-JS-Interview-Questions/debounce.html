@@ -5,11 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Debounce</title>
-    <style>
-        p {
-            padding-left: 100px;
-        }
-    </style>
+    <style></style>
 </head>
 
 <body>
@@ -20,11 +16,22 @@
         let btn = document.getElementById("btn");
         let demo = document.getElementById("demo");
 
-        btn.addEventListener("click", function () {
-            console.log("clicked");
-            demo.innerText = "Button Clicked";
-        });
+        btn.addEventListener("click", debounce);
 
+        function debounce() {
+            // return function () {
+            let clickID;
+            setTimeout(() => {
+                if (clickID === undefined) {
+                    console.log("clicked");
+                    demo.innerText = "Button Clicked";
+                } else {
+                    clearTimeout(clickID);
+                }
+            }, 5000);
+
+            // };
+        }
     </script>
 </body>
 
