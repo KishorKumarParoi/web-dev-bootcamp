@@ -32,14 +32,13 @@ console.log(step3);
 
 // ES6 Syntax Curry Converter
 
-function curry(fn) {
-  return function curried(...args) {
-    if (fn.length <= args.length) {
-      return fn.apply(this, args);
+function curry(fn, ...args) {
+  return (...newArgs) => {
+    const allArgs = [...args, ...newArgs];
+    if (fn.length <= allArgs.length) {
+      return fn(...allArgs);
     } else {
-      return function (...args2) {
-        return curried.apply(this, [...args, ...args2]);
-      };
+      return curry(fn, ...allArgs);
     }
   };
 }
@@ -50,10 +49,11 @@ function sum(a, b, c, d, e, f) {
 
 let curryConverter = curry(sum);
 
-console.dir(curryConverter(10, 20, 30));
-console.dir(curryConverter(10)(20, 30));
-console.dir(curryConverter(10)(20)(30));
-// console.dir(curryConverter(10)(20)(30)(40)(50)(60));
+// console.dir(curryConverter(10, 20, 30));
+// console.dir(curryConverter(10)(20, 30));
+// console.dir(curryConverter(10)(20)(30));
+console.log(curryConverter(10)(20)(30)(40)(50)(60));
+console.dir(curryConverter(10)(20)(30)(40)(50)(60));
 
 function product(discount) {
   return function (price) {
@@ -65,22 +65,23 @@ let twentyPercentDiscount = product(0.2);
 let prod1 = twentyPercentDiscount(1000);
 console.log(prod1);
 
-function cury(f, ...args) {
-  console.log(args);
-  return (...newArgs) => {
-    const allArgs = [...args, ...newArgs];
-    if (allArgs.length >= f.length) {
-      return f(...allArgs);
-    } else {
-      return cury(f, ...allArgs);
-    }
-  };
- a,e
-function fun(a, b, c) {
-  return a * b + c;
-}
+// function cury(f, ...args) {
+//   console.log(args);
+//   return (...newArgs) => {
+//     const allArgs = [...args, ...newArgs];
+//     if (allArgs.length >= f.length) {
+//       return f(...allArgs);
+//     } else {
+//       return cury(f, ...allArgs);
+//     }
+//   };
+// }
 
-const k = cury(fun);
-console.log(k(10, 20, 30));
+// function fun(a, b, c) {
+//   return a * b + c;
+// }
+
+// const k = cury(fun);
+// console.log(k(10, 20, 30));
 
 debugger;
