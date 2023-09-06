@@ -16,21 +16,25 @@
         let btn = document.getElementById("btn");
         let demo = document.getElementById("demo");
 
+        // debounce handler
+
         function debounce(func, delay) {
             let timeOutId;
             return function () {
                 if (timeOutId) {
                     clearTimeout(timeOutId);
                 }
-                timeOutId = setTimeout(() => {
-                    func();
-                }, delay);
+                timeOutId = setTimeout(func, delay);
+                // timeOutId = setTimeout(function () {
+                //     func();
+                //     demo.innerText = `${timeOutId} : Button Clicked`;
+                // }, delay);
             };
         }
 
         btn.addEventListener(
             "click",
-            debounce(() => {
+            debounce(function () {
                 console.log("Clicked");
             }),
             2000
