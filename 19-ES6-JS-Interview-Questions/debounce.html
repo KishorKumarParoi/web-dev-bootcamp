@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debounce</title>
+    <style>
+        p {
+            padding-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button id="btn">Click Click</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let demo = document.getElementById("demo");
+
+        btn.addEventListener("click", function () {
+            console.log("clicked");
+            demo.innerText = "Button Clicked";
+        });
+
+    </script>
+</body>
+
+</html>
