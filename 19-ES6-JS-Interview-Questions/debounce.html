@@ -17,8 +17,12 @@
         let demo = document.getElementById("demo");
 
         function debounce(func, delay) {
+            let timeOutId;
             return function () {
-                setTimeout(() => {
+                if (timeOutId) {
+                    clearTimeout(timeOutId);
+                }
+                timeOutId = setTimeout(() => {
                     func();
                 }, delay);
             };
