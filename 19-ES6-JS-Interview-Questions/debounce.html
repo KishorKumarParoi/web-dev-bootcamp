@@ -24,11 +24,11 @@
                 if (timeOutId) {
                     clearTimeout(timeOutId);
                 }
-                timeOutId = setTimeout(func, delay);
-                // timeOutId = setTimeout(function () {
-                //     func();
-                //     demo.innerText = `${timeOutId} : Button Clicked`;
-                // }, delay);
+                // timeOutId = setTimeout(func, delay);
+                timeOutId = setTimeout(function () {
+                    func();
+                    demo.innerText = `${timeOutId} : Button Clicked`;
+                }, delay);
             };
         }
 
@@ -36,8 +36,7 @@
             "click",
             debounce(function () {
                 console.log("Clicked");
-            }),
-            2000
+            }, 2000)
         );
     </script>
 </body>
