@@ -52,9 +52,14 @@
         let inputText = document.getElementById("Name");
         let button = document.getElementById("btn");
 
+        let updateDebounceText = debounce((text) => {
+            debounceText.textContent = text;
+        }, 1000);
+
         inputText.addEventListener("keyup", (e) => {
             defaultText.textContent = e.target.value;
             // console.log("Default : ", e.target.value);
+            updateDebounceText(e.target.value);
         });
 
         // Debounce
