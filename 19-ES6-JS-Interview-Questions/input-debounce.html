@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debounce in Input</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <label for="Name">Enter Name: </label>
+    <input type="text" name="Name" id="Name" />
+    <button type="submit" id="btn">Submit</button>
+
+    <script>
+        let demo = document.getElementById("demo");
+        let Name = document.getElementById("Name");
+        let button = document.getElementById("btn");
+
+        function debounce(fn, delay) {
+            let timeOutId;
+            return function () {
+                if (timeOutId) clearTimeout(timeOutId);
+                timeOutId = setTimeout(() => {
+                    fn();
+                    console.log(`${timeOutId} : clicked`);
+                }, delay);
+            };
+        }
+
+        button.addEventListener(
+            "click",
+            debounce(function () {
+                demo.innerText = Name.value;
+            }, 3000)
+        );
+    </script>
+</body>
+
+</html>
