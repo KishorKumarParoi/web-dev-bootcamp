@@ -11,3 +11,7 @@ console.log(arr);
 arr.unshift(1000, 2000, 3000);
 console.log(arr.length);
 console.log(arr);
+
+arr.shift();
+console.log(arr.length);
+console.log(arr);
