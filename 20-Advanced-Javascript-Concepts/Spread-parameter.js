@@ -24,4 +24,12 @@ arr.concat(...newArr);
 console.log(arr);
 console.log(newArr);
 
+let arr1 = [1, 2, 3];
+let arr3 = [4.5, 100];
+console.log(arr1.concat(arr3));
+console.log(arr1);
+console.log([...arr1, ...arr3]);
+arr1.push(...arr3);
+console.log(arr1);
+
 debugger;
