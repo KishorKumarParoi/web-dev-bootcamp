@@ -46,6 +46,17 @@ class Person {
     });
     return val;
   };
+
+  exampleFunction4 = function () {
+    let arr = [1, 2, 3, 4, 5];
+    let val = arr.findIndex((ele) => {
+      //   console.log(this);
+      //   console.log(this.test());
+      //   console.log(this.fullName());
+      return ele > 4;
+    });
+    return val;
+  };
 }
 
 const kishor = new Person("kishor", 25);
@@ -54,4 +65,6 @@ console.log(x); // kishor 25
 console.log(kishor.exampleFunction()); // 1 2 3 4 5
 console.log(kishor.exampleFunction2());
 console.log(kishor.exampleFunction3());
+console.log(kishor.exampleFunction4());
+
 debugger;
