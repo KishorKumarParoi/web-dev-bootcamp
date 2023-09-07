@@ -16,4 +16,12 @@ console.log(arr);
 const newArr = [...arr.slice(0, 3), 6969, 7878, [...arr2], ...arr.slice(3)];
 console.log(newArr);
 
+// mutable way of merging
+newArr.push(...arr2);
+console.log(newArr);
+
+arr.concat(...newArr);
+console.log(arr);
+console.log(newArr);
+
 debugger;
