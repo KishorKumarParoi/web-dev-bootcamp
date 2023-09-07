@@ -1,0 +1,21 @@
+let obj = {
+  name: "KKP",
+  age: 30,
+  city: "New York",
+  test: function () {
+    console.log("Hello World");
+  },
+  fullName: function () {
+    return `${this.name} ${this.age}`;
+  },
+};
+
+let keys = Object.keys(obj);
+let value = Object.values(obj);
+let entries = Object.entries(obj);
+
+console.log(keys);
+console.log(value);
+console.log(entries);
+
+debugger;
