@@ -32,4 +32,32 @@ console.log([...arr1, ...arr3]);
 arr1.push(...arr3);
 console.log(arr1);
 
+// mutable way of flatting
+const ar = [1, [2, 3], [4, [5]]];
+const ar2 = [...ar];
+const flatArr = ar2.flat(Infinity);
+console.log(ar);
+console.log(flatArr);
+
+// immutable way of flatting
+function flatten(arr) {
+  // return arr.reduce((acc, item) => {
+  //     if (Array.isArray(item)) {
+  //     acc = acc.concat(flatten(item));
+  //     } else {
+  //     acc.push(item);
+  //     }
+  //     return acc;
+  // }, []);
+
+  return arr.reduce((prevValue, currValue) => {
+    Array.isArray(currValue)
+      ? prevValue.concat(flatten(currValue))
+      : prevValue.push(currValue);
+    return prevValue;
+  }, []);
+}
+const arr12 = [1, [2, 3], [4, [5]]];
+const newArr12 = flatten(arr);
+
 debugger;
