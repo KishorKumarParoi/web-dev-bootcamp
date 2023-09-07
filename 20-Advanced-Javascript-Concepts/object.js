@@ -31,4 +31,13 @@ obj.res = res;
 
 console.log(obj);
 
+let myObj = {
+  obj,
+  x,
+  y,
+  res,
+};
+
+console.log(myObj);
+
 debugger;
