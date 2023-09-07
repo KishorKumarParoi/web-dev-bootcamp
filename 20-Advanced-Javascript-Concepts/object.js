@@ -18,4 +18,17 @@ console.log(keys);
 console.log(value);
 console.log(entries);
 
+let x = 10;
+let y = 100;
+let res = { x, y };
+console.log(res);
+console.log(typeof res);
+
+res = x + y;
+obj.x = x;
+obj.y = y;
+obj.res = res;
+
+console.log(obj);
+
 debugger;
