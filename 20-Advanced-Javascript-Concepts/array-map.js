@@ -15,3 +15,10 @@ console.log(arr);
 arr.shift();
 console.log(arr.length);
 console.log(arr);
+
+let mappped = arr.map((ele) => {
+  return ele * 2;
+});
+
+console.log(mappped);
+console.log(arr);
