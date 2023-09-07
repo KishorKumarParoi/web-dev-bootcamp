@@ -13,4 +13,7 @@ console.log(filter);
 arr.splice(3, 0, 100);
 console.log(arr);
 
+const newArr = [...arr.slice(0, 3), 6969, 7878, [...arr2], ...arr.slice(3)];
+console.log(newArr);
+
 debugger;
