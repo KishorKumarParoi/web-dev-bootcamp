@@ -9,7 +9,8 @@ function Person(name, age) {
 }
 
 const kishor = new Person("kishor", 25);
-console.log(kishor.fullName); // kishor 25
+let x = kishor.fullName();
+console.log(x); // kishor 25
 console.log(kishor.age); // 25
 
 debugger;
