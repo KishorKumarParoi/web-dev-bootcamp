@@ -2,9 +2,9 @@ function Person(name, age) {
   this.name = name;
   this.age = age;
 
-  this.fullName = function () {
-    console.log(this.name + " " + this.age);
-    // return this.name + " " + this.age;
+  this.fullName = this.name + " " + this.age;
+  this.fullName = () => {
+    return this.name + " " + this.age;
   };
 }
 
