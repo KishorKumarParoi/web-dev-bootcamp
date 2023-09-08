@@ -16,4 +16,12 @@ function flatt(arr) {
 const flat = flatt(flatten);
 console.log(flat);
 
+const arr3 = ["apple", "banana", "cherry"];
+const obj = arr3.reduce((acc, curr) => {
+  acc[curr] = curr.length;
+  return acc;
+}, {});
+// Result: { apple: 5, banana: 6, cherry: 6 }
+console.log(obj);
+
 debugger;
