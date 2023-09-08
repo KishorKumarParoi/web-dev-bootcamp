@@ -10,3 +10,7 @@ arr.forEach((item) => {
 });
 
 console.log(intersection);
+
+const arr3 = arr.filter((item) => arr2.includes(item));
+console.log(arr3);
+
