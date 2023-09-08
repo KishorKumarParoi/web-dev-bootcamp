@@ -19,3 +19,4 @@ console.log(newArr);
 
 const arr2 = arr.filter((item, index) => arr.indexOf(item) === index);
 console.log(arr2);
+
