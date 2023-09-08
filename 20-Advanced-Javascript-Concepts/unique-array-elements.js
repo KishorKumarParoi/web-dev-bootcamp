@@ -14,3 +14,8 @@ arr.forEach((item, index) => {
 });
 
 console.log(newArr);
+
+// immutable way of removing duplicates
+
+const arr2 = arr.filter((item, index) => arr.indexOf(item) === index);
+console.log(arr2);
