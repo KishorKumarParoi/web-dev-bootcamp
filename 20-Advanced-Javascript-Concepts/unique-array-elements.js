@@ -4,8 +4,13 @@ const arr = [1, 2, 3, 4, 4, 6, 5, 6, 7, 8, 9];
 
 const newArr = [];
 arr.forEach((item, index) => {
-  if (!newArr.includes(item)) {
+  //   if (!newArr.includes(item)) {
+  //     newArr.push(item);
+  //   }
+
+  if (newArr.indexOf(item) === -1) {
     newArr.push(item);
   }
 });
+
 console.log(newArr);
