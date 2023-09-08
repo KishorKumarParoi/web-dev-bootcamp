@@ -60,4 +60,16 @@ function flatten(arr) {
 const arr12 = [1, [2, 3], [4, [5]]];
 const newArr12 = flatten(arr);
 
+const myObj = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+];
+
+let newObj = myObj.map((obj) => {
+  obj.name = "Kishor";
+});
+
+console.log(myObj);
+console.log(newObj);
+
 debugger;
