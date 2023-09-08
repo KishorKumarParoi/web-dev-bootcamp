@@ -65,11 +65,16 @@ const myObj = [
   { id: 2, name: "Bob" },
 ];
 
-let newObj = myObj.map((obj) => {
-  obj.name = "Kishor";
-});
+// let newObj = myObj.map((obj) => {
+//   obj.name = "Kishor";
+// });
+
+const Arr = myObj.map((obj) =>
+  obj.id === 1 ? { ...obj, name: "Kishor" } : obj
+);
 
 console.log(myObj);
-console.log(newObj);
+// console.log(newObj);
+console.log(Arr);
 
 debugger;
