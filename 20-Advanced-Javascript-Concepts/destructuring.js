@@ -37,3 +37,9 @@ const [a, , , , d, e] = arr;
 console.log(a);
 console.log(d);
 console.log(e);
+
+const arr2 = [1, 2, [3, [4, 9]], 5];
+const [, , [, [i, j]], f] = arr2;
+console.log(i);
+console.log(j);
+console.log(f);
