@@ -6,5 +6,10 @@ const obj = {
   city: "New York",
 };
 
-const { name: Name } = obj;
+const { name: Name, age: Boyos } = obj;
 console.log(Name);
+console.log(Boyos);
+
+const { city, ...rest } = obj;
+console.log(city);
+console.log(rest);
