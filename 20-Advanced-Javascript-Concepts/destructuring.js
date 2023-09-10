@@ -26,3 +26,14 @@ console.log(Certificate);
 
 const { residence: { district } = {} } = obj;
 console.log(district);
+
+const arr = [1, 2, 3, 100, 4, 5];
+const [first, second, ...restArr] = arr;
+console.log(first);
+console.log(second);
+console.log(restArr);
+
+const [a, , , , d, e] = arr;
+console.log(a);
+console.log(d);
+console.log(e);
