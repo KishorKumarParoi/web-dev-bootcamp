@@ -23,3 +23,6 @@ const {
 } = obj;
 // console.log(degree);
 console.log(Certificate);
+
+const { residence: { district } = {} } = obj;
+console.log(district);
