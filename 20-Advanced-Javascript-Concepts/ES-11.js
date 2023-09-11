@@ -30,31 +30,37 @@
 // num += 100n;
 // console.log(num);
 
-let num1 = 10n;
-let num2 = 20n;
+// let num1 = 10n;
+// let num2 = 20n;
 
-console.log(num1 + num2);
-console.log(num1 - num2);
-console.log(num1 * num2);
-console.log(num1 / num2);
-console.log(num1 % num2);
+// console.log(num1 + num2);
+// console.log(num1 - num2);
+// console.log(num1 * num2);
+// console.log(num1 / num2);
+// console.log(num1 % num2);
 
 // optimal Chaining
-let obj = {
-  a: 1,
-  b: 2,
-  c: {
-    d: {
-      e: {
-        f: "Kishor Kumar Paroi",
-      },
-    },
-    e: 4,
-  },
-};
+// let obj = {
+//   a: 1,
+//   b: 2,
+//   c: {
+//     d: {
+//       e: {
+//         f: "Kishor Kumar Paroi",
+//       },
+//     },
+//     e: 4,
+//   },
+// };
 
-console.log(obj.c.d.e.f);
-console.log(obj.c?.d?.e?.f);
-let x = obj.c.f;
-console.log(x);
-console.log(obj.c?.f);
+// console.log(obj.c.d.e.f);
+// console.log(obj.c?.d?.e?.f);
+// let x = obj.c.f;
+// console.log(x);
+// console.log(obj.c?.f);
+
+let fruits = ["apple", "banana", "orange", "mango", "grapes"];
+fruits = null;
+console.log(fruits[0]); // throws error
+// console.log(fruits?.[0]); // returns null
+console.log(fruits.length);
