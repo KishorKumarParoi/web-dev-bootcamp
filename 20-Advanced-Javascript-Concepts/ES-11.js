@@ -72,3 +72,30 @@
 // nullish coalescing operator returns right part if first part is either null or undefined
 // console.log(language ?? "Javascript");
 // console.log(language || "Javascript");
+
+// Promise.allSettled()
+
+const promise1 = new Promise((resolve, reject) => {
+  //   setTimeout(() => {
+  resolve("Promise 1");
+  //   }, 1000);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  //   resolve("Promise 2");
+  reject(new Error("Error from Promise 2"));
+});
+
+const promise3 = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Promise 3");
+  }, 3000);
+});
+
+Promise.all([promise1, promise2, promise3])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
+
+Promise.allSettled([promise1, promise2, promise3])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
