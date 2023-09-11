@@ -54,4 +54,7 @@ let obj = {
 };
 
 console.log(obj.c.d.e.f);
-console.log(obj.c.d.e.f.e); // returns undefined
+console.log(obj.c?.d?.e?.f);
+let x = obj.c.f;
+console.log(x);
+console.log(obj.c?.f);
