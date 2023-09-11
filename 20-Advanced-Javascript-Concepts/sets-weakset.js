@@ -50,4 +50,10 @@ console.log(union);
 let Intersection = new Set([...a].filter((item) => (b.has(item) ? item : "")));
 console.log(Intersection);
 
+// difference
+let difference = new Set([...a].filter((item) => !b.has(item)));
+let difference2 = new Set([...b].filter((item) => !a.has(item)));
+console.log(difference);
+console.log(difference2);
+
 debugger;
