@@ -76,9 +76,9 @@
 // Promise.allSettled()
 
 const promise1 = new Promise((resolve, reject) => {
-  //   setTimeout(() => {
-  resolve("Promise 1");
-  //   }, 1000);
+  setTimeout(() => {
+    resolve("Promise 1");
+  }, 1000);
 });
 
 const promise2 = new Promise((resolve, reject) => {
@@ -99,3 +99,16 @@ Promise.all([promise1, promise2, promise3])
 Promise.allSettled([promise1, promise2, promise3])
   .then((result) => console.log(result))
   .catch((err) => console.log(err));
+
+// String MatchAll
+
+let text = `My Favorite colors are #ff0000 #00ff00 #0000ff and #000000`;
+let pattern =
+  /#+(?<group1>[a-fA-F\d]{2})(?<group2>[a-fA-F\d]{2})(?<group3>[a-fA-F\d]{2})/gi;
+
+// let result = text.match(pattern);
+let result = text.matchAll(pattern);
+for (let item of result) {
+  console.log(item);
+}
+// console.log(result);
