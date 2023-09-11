@@ -59,8 +59,16 @@
 // console.log(x);
 // console.log(obj.c?.f);
 
-let fruits = ["apple", "banana", "orange", "mango", "grapes"];
-fruits = null;
+// let fruits = ["apple", "banana", "orange", "mango", "grapes"];
+// fruits = null;
 // console.log(fruits[0]); // throws error
-console.log(fruits?.[0]); // returns null
+// console.log(fruits?.[0]); // returns null
 // console.log(fruits.length);
+
+// nullish coalescing operator
+let language;
+language = null;
+
+// nullish coalescing operator returns right part if first part is either null or undefined
+console.log(language ?? "Javascript");
+console.log(language || "Javascript");
