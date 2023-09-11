@@ -80,4 +80,21 @@ console.log(weakset);
 //   console.log(item);
 // }
 
+// usage of weakSet
+// 1. to store private data
+// 2. to maintain a list of registered listeners
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  method() {
+    console.log(`Hello ${this.name}`);
+  }
+}
+
+let person = new Person("Kishor"); 
+person.method();
+console.log(person.name); 
+
 debugger;
