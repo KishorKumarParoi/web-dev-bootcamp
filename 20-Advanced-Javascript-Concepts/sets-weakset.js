@@ -104,6 +104,6 @@ let person = new Person("Kishor");
 person.method();
 console.log(person.name);
 
-// console.log(Person.prototype.method());
+console.log(Person.prototype.method());
 
 debugger;
