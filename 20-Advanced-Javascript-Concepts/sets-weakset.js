@@ -37,4 +37,13 @@ newSet.add(obj);
 
 console.log(newSet);
 
+// Set Union, Intersection
+
+let a = new Set([1, 2, 3, 4, 5]);
+let b = new Set([4, 5, 6, 7, 8]);
+
+// Union
+let union = new Set([...a, ...b]);
+console.log(union);
+
 debugger;
