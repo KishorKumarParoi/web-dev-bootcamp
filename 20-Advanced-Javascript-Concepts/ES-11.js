@@ -61,6 +61,6 @@
 
 let fruits = ["apple", "banana", "orange", "mango", "grapes"];
 fruits = null;
-console.log(fruits[0]); // throws error
-// console.log(fruits?.[0]); // returns null
-console.log(fruits.length);
+// console.log(fruits[0]); // throws error
+console.log(fruits?.[0]); // returns null
+// console.log(fruits.length);
