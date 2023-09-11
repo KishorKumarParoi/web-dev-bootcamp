@@ -67,7 +67,7 @@
 
 // nullish coalescing operator
 let language;
-language = null;
+language = "";
 
 // nullish coalescing operator returns right part if first part is either null or undefined
 console.log(language ?? "Javascript");
