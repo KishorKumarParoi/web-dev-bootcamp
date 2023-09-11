@@ -2,9 +2,13 @@
 // Hello();
 // World();
 
-(async function () {
-  const { Hello: hello } = await import("./export.js");
-  const { World: world } = await import("./export.js");
-  hello();
-  world();
-})();
+// (async function () {
+//   const { Hello: hello } = await import("./export.js");
+//   const { World: world } = await import("./export.js");
+//   hello();
+//   world();
+// })();
+
+import * as all from "./export.js";
+all.Hello();
+all.World();
