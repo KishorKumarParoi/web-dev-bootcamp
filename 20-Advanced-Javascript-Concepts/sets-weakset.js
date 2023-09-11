@@ -56,4 +56,18 @@ let difference2 = new Set([...b].filter((item) => !a.has(item)));
 console.log(difference);
 console.log(difference2);
 
+// weakset
+let weakset = new WeakSet();
+weakset.add(obj);
+weakset.add({
+  a: 1,
+  b: 2,
+});
+weakset.add(obj);
+weakset.add({
+  a: 1,
+  b: 2,
+});
+console.log(weakset);
+
 debugger;
