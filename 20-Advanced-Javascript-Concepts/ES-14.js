@@ -12,6 +12,8 @@ console.log(arr);
 
 // Splice Array in Immutable Way
 
-let SplicedArr = arr.toSpliced(2, 2, 100, 200); // es-14 feature
+// let SplicedArr = arr.toSpliced(2, 2, 100, 200); // es-14 feature
+let SplicedArr = [...arr].splice(2, 2, 100, 200);
+SplicedArr = arr.slice().splice(2, 2, 100, 200);
 console.log(SplicedArr);
 console.log(arr);
