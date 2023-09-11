@@ -25,3 +25,8 @@ console.log(biggestNumber);
 console.log(biggestNumber);
 biggestNumber *= biggestNumber;
 console.log(biggestNumber);
+
+let num = 10n;
+num += 100n;
+console.log(num);
+
