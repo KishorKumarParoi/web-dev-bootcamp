@@ -9,6 +9,11 @@
 //   world();
 // })();
 
-import * as all from "./export.js";
-all.Hello();
-all.World();
+// import * as all from "./export.js";
+// all.Hello();
+// all.World();
+
+import("./export.js").then(({ Hello: hello, World: world }) => {
+  hello();
+  world();
+});
