@@ -70,4 +70,14 @@ weakset.add({
 });
 console.log(weakset);
 
+// weakset is not an iterable
+// for (let item of weakset) {
+//   console.log(item);
+// }
+
+// return undefined
+// for (let item in weakset) {
+//   console.log(item);
+// }
+
 debugger;
