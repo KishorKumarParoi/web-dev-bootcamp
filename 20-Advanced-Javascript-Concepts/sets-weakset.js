@@ -46,4 +46,8 @@ let b = new Set([4, 5, 6, 7, 8]);
 let union = new Set([...a, ...b]);
 console.log(union);
 
+// Intersection
+let Intersection = new Set([...a].filter((item) => (b.has(item) ? item : "")));
+console.log(Intersection);
+
 debugger;
