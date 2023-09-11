@@ -89,12 +89,15 @@ class Person {
     this.name = name;
   }
   method() {
-    console.log(`Hello ${this.name}`);
+    console.log("Hello World! ");
+    // console.log(`Hello ${this.name}`);ß
   }
 }
 
-let person = new Person("Kishor"); 
-person.method();
-console.log(person.name); 
+let person = new Person("Kishor");
+// person.method();
+// console.log(person.name);
+
+console.log(Person.prototype.method());
 
 debugger;
