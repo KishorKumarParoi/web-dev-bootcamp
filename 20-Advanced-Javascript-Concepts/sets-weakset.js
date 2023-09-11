@@ -17,4 +17,24 @@ console.log(arr);
 let newSet = new Set(arr.map((item) => item * 2));
 console.log(newSet);
 
+newSet.add({
+  a: 1,
+  b: 2,
+});
+
+newSet.add({
+  a: 1,
+  b: 2,
+});
+
+let obj = {
+  name: " Kishor",
+  age: 24,
+};
+
+newSet.add(obj);
+newSet.add(obj);
+
+console.log(newSet);
+
 debugger;
