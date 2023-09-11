@@ -38,3 +38,20 @@ console.log(num1 - num2);
 console.log(num1 * num2);
 console.log(num1 / num2);
 console.log(num1 % num2);
+
+// optimal Chaining
+let obj = {
+  a: 1,
+  b: 2,
+  c: {
+    d: {
+      e: {
+        f: "Kishor Kumar Paroi",
+      },
+    },
+    e: 4,
+  },
+};
+
+console.log(obj.c.d.e.f);
+console.log(obj.c.d.e.f.e); // returns undefined
