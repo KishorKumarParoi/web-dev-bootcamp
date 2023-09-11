@@ -17,3 +17,14 @@ let SplicedArr = [...arr].splice(2, 2, 100, 200);
 SplicedArr = arr.slice().splice(2, 2, 100, 200);
 console.log(SplicedArr);
 console.log(arr);
+
+// replacing array element in immutable way
+
+let newArr = arr.with(2, 100); // es-14 feature
+newArr = [...arr].map((value, index) => {
+  if (index === 2) {
+    return 100;
+  } else return value;
+});
+
+console.log(newArr);
