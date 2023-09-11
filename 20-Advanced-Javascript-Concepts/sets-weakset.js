@@ -84,20 +84,26 @@ console.log(weakset);
 // 1. to store private data
 // 2. to maintain a list of registered listeners
 
+const ws = new WeakSet();
 class Person {
   constructor(name) {
     this.name = name;
+    ws.add(this);
   }
   method() {
-    console.log("Hello World! ");
-    // console.log(`Hello ${this.name}`);ß
+    if (!ws.has(this)) {
+      throw new Error("Person.prototype.method called with incompatible this");
+    } else {
+      console.log("Hello World! ");
+      return `Hello ${this.name}`;
+    }
   }
 }
 
 let person = new Person("Kishor");
-// person.method();
-// console.log(person.name);
+person.method();
+console.log(person.name);
 
-console.log(Person.prototype.method());
+// console.log(Person.prototype.method());
 
 debugger;
