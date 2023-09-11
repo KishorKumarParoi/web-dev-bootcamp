@@ -7,4 +7,14 @@ console.log(set.size);
 set.delete(100);
 console.log(set);
 
+for (let item of set) {
+  console.log(item);
+}
+
+let arr = [...set];
+console.log(arr);
+
+let newSet = new Set(arr.map((item) => item * 2));
+console.log(newSet);
+
 debugger;
