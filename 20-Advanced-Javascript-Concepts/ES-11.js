@@ -66,9 +66,9 @@
 // console.log(fruits.length);
 
 // nullish coalescing operator
-let language;
-language = "";
+// let language;
+// language = "";
 
 // nullish coalescing operator returns right part if first part is either null or undefined
-console.log(language ?? "Javascript");
-console.log(language || "Javascript");
+// console.log(language ?? "Javascript");
+// console.log(language || "Javascript");
