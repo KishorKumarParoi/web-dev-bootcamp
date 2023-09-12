@@ -15,6 +15,9 @@ const obj = {
   [x]: "world",
 };
 
+delete obj.age; // deleted age property
+delete obj[Symbol("Array for this Object")]; // can't delete this property
+
 for (let item in obj) {
   console.log(item);
 }
