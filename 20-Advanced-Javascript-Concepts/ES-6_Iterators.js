@@ -30,3 +30,25 @@ console.dir(stringIterator.next());
 console.dir(stringIterator.next());
 console.dir(stringIterator.next());
 console.dir(stringIterator.next());
+
+console.log("-> Implementing custom iterator");
+
+function customIterator(collection) {
+  let i = 0;
+  return {
+    next() {
+      return {
+        value: collection[i++],
+        done: collection.length < i,
+      };
+    },
+  };
+}
+
+let customIteratorObj = customIterator([...arr]);
+console.dir(customIteratorObj.next());
+console.dir(customIteratorObj.next());
+console.dir(customIteratorObj.next());
+console.dir(customIteratorObj.next());
+console.dir(customIteratorObj.next());
+console.dir(customIteratorObj.next());
