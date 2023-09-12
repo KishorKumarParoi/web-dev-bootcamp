@@ -30,3 +30,23 @@ console.log(myArray);
 console.log(myArray.includes(4));
 console.log(myArray["includes"](3));
 myArray[includes](2);
+
+// Search Implementation
+
+class Product {
+  constructor(title) {
+    this.title = title;
+  }
+
+  // implementing search
+  [Symbol.search](string) {
+    string.indexOf(this.title) >= 0
+      ? console.log("Found " + this.title)
+      : console.log("Not Found");
+  }
+}
+
+let laptop = new Product("Laptop");
+"HP Laptop".search(laptop);
+let hello = new Product("Hello");
+"Hello World".search(hello);
