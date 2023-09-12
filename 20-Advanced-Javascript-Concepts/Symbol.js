@@ -5,7 +5,9 @@ console.log(x === y); // false
 console.log(x);
 console.log(y);
 
-const arr = Symbol("Array for this Object");
+let arr = Symbol("Array for this Object");
+arr = Symbol("Array of this Object");
+
 const obj = {
   name: "Kishor",
   surName: "Paroi",
