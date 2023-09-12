@@ -1,5 +1,5 @@
-const x = Symbol("hello");
-const y = Symbol("hello");
+const x = Symbol.for("hello");
+const y = Symbol.for("hello");
 
 console.log(x === y); // false
 console.log(x);
