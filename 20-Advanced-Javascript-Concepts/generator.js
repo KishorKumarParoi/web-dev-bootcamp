@@ -13,9 +13,15 @@ function* generator(obj) {
   for (let item of arr) {
     yield item[1];
   }
+  return "KKP";
 }
 
 let iterator = generator(obj);
+
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
 
 for (let item of iterator) {
   console.log(item);
