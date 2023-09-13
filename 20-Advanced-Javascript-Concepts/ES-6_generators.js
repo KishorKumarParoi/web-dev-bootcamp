@@ -55,3 +55,15 @@ console.log(iterator2.next());
 console.log(iterator2.next());
 
 console.log([...obj]);
+
+for (let item of obj) {
+  console.log(item);
+}
+
+for (let item in obj) {
+  console.log(item);
+}
+
+console.dir(obj);
+
+
