@@ -53,4 +53,27 @@ console.dir(customIteratorObj.next());
 console.dir(customIteratorObj.next());
 console.dir(customIteratorObj.next());
 
+// changing Symbol.iterator
 
+function range(start, end, step) {
+  let curr = start;
+  return {
+    [Symbol.iterator]: function () {
+      return {
+        next() {
+          if (curr < end) {
+            curr += step;
+            return {
+              done: false,
+              value: curr,
+            };
+          } else {
+            return { done: true };
+          }
+        },
+      };
+    },
+  };
+}
+
+console.log([...range(1, 1e5, 2)]);
