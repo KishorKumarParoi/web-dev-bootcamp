@@ -18,3 +18,5 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(circle);
+
+
