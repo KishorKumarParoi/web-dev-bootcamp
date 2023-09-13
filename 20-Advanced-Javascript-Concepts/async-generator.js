@@ -1,21 +1,27 @@
 console.log("async generator");
 
 const takeOrder = (customer) => {
-  setTimeout(() => {
-    console.log(`Taking order for ${customer}`);
-  }, 1000);
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`Taking order for ${customer}`);
+    }, 1000);
+  });
 };
 
 const processOrder = (customer) => {
-  setTimeout(() => {
-    console.log(`Processing order for ${customer}`);
-  }, 1000);
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`Processing order for ${customer}`);
+    }, 1000);
+  });
 };
 
 const completeOrder = (customer) => {
-  setTimeout(() => {
-    console.log(`Completed order for ${customer}`);
-  }, 1000);
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`Completed order for ${customer}`);
+    }, 1000);
+  });
 };
 
 // takeOrder("Kishor", (customer) => {
@@ -26,14 +32,14 @@ const completeOrder = (customer) => {
 //   });
 // });
 
-function* solution(customer) {
-  yield takeOrder(customer);
-  yield processOrder(customer);
-  yield completeOrder(customer);
+async function* solution(customer) {
+  yield await takeOrder(customer);
+  yield await processOrder(customer);
+  yield await completeOrder(customer);
 }
 
-let iterator = solution("Kishor");
-console.log(iterator.next());
-// console.log(iterator.next());
-// console.log(iterator.next());
-// console.log(iterator.next());
+let gen = solution("Krishna");
+// gen.next().then((data) => console.log(data.value));
+gen.next().then(({ value }) => console.log(value));
+gen.next().then(({ value }) => console.log(value));
+gen.next().then(({ value }) => console.log(value));
