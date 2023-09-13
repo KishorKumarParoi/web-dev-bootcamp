@@ -51,3 +51,21 @@ const promises = [gen.next(), gen.next(), gen.next(), gen.next()];
     console.log(item);
   }
 })();
+
+// Symbol.asyncIterator = Symbol.asyncIterator || Symbol("asyncIterator");
+
+const asyncIterator = {
+  *[Symbol.asyncIterator]() {
+    yield "Hello";
+    yield "World";
+    yield "Of";
+    yield "Async";
+    yield "Iterators";
+  },
+};
+
+(async () => {
+  for await (let item of asyncIterator) {
+    console.log(item);
+  }
+})();
