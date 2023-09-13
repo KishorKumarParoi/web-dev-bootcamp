@@ -22,7 +22,7 @@ const obj = {
   value3: 30,
 };
 
-// console.log(Object.entries(obj));
+console.log(Object.entries(obj));
 
 obj[Symbol.iterator] = function () {
   let index = 0;
@@ -65,5 +65,3 @@ for (let item in obj) {
 }
 
 console.dir(obj);
-
-
