@@ -40,6 +40,14 @@ async function* solution(customer) {
 
 let gen = solution("Krishna");
 // gen.next().then((data) => console.log(data.value));
-gen.next().then(({ value }) => console.log(value));
-gen.next().then(({ value }) => console.log(value));
-gen.next().then(({ value }) => console.log(value));
+// gen.next().then(({ value }) => console.log(value));
+// gen.next().then(({ value }) => console.log(value));
+// gen.next().then(({ value }) => console.log(value));
+
+const promises = [gen.next(), gen.next(), gen.next(), gen.next()];
+
+(async function () {
+  for await (let item of promises) {
+    console.log(item);
+  }
+})();
