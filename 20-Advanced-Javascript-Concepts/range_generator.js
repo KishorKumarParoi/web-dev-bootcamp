@@ -9,9 +9,10 @@ function* range(start, end, step) {
   }
 }
 
-let iterator = [...range(1, 52, 3)];
+let iterator = range(1, 52, 3);
+console.log(iterator.next());
+console.log(iterator.next());
 
 for (let item of iterator) {
   console.log(item);
 }
-
