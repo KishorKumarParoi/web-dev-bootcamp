@@ -1,5 +1,5 @@
 let circle = document.getElementById("circle");
-// circle.style.color = "blue";
+circle.style.color = "blue";
 // console.log(circle.style.color);
 
 const observer = new IntersectionObserver(
