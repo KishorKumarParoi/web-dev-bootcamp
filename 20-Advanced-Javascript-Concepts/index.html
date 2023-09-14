@@ -5,58 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demo</title>
     <style>
-      .dummy {
-        height: 2000px;
-        width: 1000px;
-        border: 2px solid black;
-      }
-      .dummy h1 {
-        margin-left: 40%;
-        width: 200px;
+      div:not(.circle) {
         height: 200px;
-        padding-top: 20px;
-        background-color: cyan;
-        text-align: center;
-        transform: scale(1.5) ease-in-out;
+        width: 200px;
+        border-radius: 10%;
+        background-color: aqua;
+        border: 3px solid pink;
+        transition: all 0.5s ease-in-out;
+        transform: scale(1.2);
+        opacity: 0;
+        margin: 0 auto 20px auto;
       }
-      .circle {
-        width: 400px;
-        height: 400px;
+
+      #circle {
+        border: 5px solid black;
         background-color: red;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        translate: transform(-50%, -50%);
+        margin: calc(100vh + 300px) auto;
       }
+      /* .visible {
+        transform: scale(1);
+        opacity: 1;
+      } */
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="dummy">
-        <h1>dummy</h1>
-      </div>
-      <div class="dummy">
-        <h1>dummy</h1>
-      </div>
-      <div class="dummy">
-        <h1>dummy</h1>
-      </div>
-      <div class="dummy">
-        <h1>dummy</h1>
-      </div>
-      <div class="dummy">
-        <h1>dummy</h1>
-      </div>
-      <div class="dummy">
-        <h1>dummy</h1>
-      </div>
-      <div class="dummy">
-        <h1>dummy</h1>
-      </div>
-
-      <div class="circle" id="circle"></div>
-    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="circle" id="circle"></div>
     <script src="./intersection-observer-api.js"></script>
+    <script src="./example.js"></script>
   </body>
 </html>
