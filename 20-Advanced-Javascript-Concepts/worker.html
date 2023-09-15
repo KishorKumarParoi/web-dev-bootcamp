@@ -16,6 +16,8 @@
     <input type="button" value="Calculate Total" id="calc" />
 
     <script>
+      const worker = new Worker("./worker.js");
+
       let btn = document.getElementById("btn");
       let calc = document.getElementById("calc");
 
@@ -27,14 +29,13 @@
         }
       });
 
-      calc.addEventListener("click", function () {
-        let total = 0;
-        for (let i = 0; i < 1000; i++) {
-          total += i;
-        }
-        console.log(total);
+      calc.addEventListener("click", () => {
+        worker.postMessage("Hello worker! Please do the work for me!");
       });
+
+      worker.onmessage = function (message) {
+        console.log(`The total is ${message.data}`);
+      };
     </script>
-    <!-- <script src="worker.js"></script> -->
   </body>
 </html>
