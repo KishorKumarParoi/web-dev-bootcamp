@@ -1,4 +1,4 @@
-// import a from "./index.js";
+import a from "./index.js";
 let a = require("./index.js");
 
 var b = 100;
